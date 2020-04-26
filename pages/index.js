@@ -1,204 +1,169 @@
-import Head from 'next/head'
+import React from "react";
 
-export default function Home() {
+//next
+import Head from "next/head";
+
+// components
+import Footer from '../components/Footer';
+import Logos from "../components/Logos";
+import WelcomeMessage from "../components/WelcomeMessage";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
+
+//data files
+import welcomeMessage from "../components/Data/welcome_info";
+
+//antd
+import {Divider} from 'antd';
+import Link from "next/link";
+
+
+function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div>
+        <Head>
+          <title> Home Page </title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+        </Head>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <header id="homepage-header">
+          <div className="header-img">
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            <div className="navbar-container">
+              {/*navbar desktop*/}
+              <div className="top-navbar">
+                <NavbarDesktop/>
+              </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+              {/*navbar mobile*/}
+              <div className="drawer-navbar">
+                <NavbarMobile/>
+              </div>
+            </div>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <section className="welcome-messages">
+              {/*Link to Venture Page*/}
+              <section className="welcome-message-venture">
+                <Link href="/ventures">
+                  <a title="Ventures Page"><WelcomeMessage
+                      welcomeMessage={welcomeMessage["ventures_homepage"]}/></a>
+                </Link>
+              </section>
 
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
 
-          <a
-            href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with ZEIT Now.
-            </p>
-          </a>
-        </div>
-      </main>
+              {/*/!*Link to Development Page*!/*/}
+              <section className="welcome-message-development">
+                <Link href="/development">
+                  <a title="Development Page"><WelcomeMessage
+                      welcomeMessage={welcomeMessage["development_homepage"]}/></a>
+                </Link>
+              </section>
 
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-        </a>
-      </footer>
+            </section>
+          </div>
+        </header>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        {/*Logo of the customers*/
         }
+        <section className="customers">
+          <Divider><h2>Our Customers</h2></Divider>
+          <Logos/>
+        </section>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+        < footer>
+          < div
+              id="footer">
+            < Footer/>
+          </div>
+        </footer>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+        <style jsx>{`
+            .header-img {
+             display: flex;
+             flex-direction: column;
+             flex-flow: flex-direction;
+             max-width: 100%;
+             height: 100vh;
+             //center the background img
+             background-position: center center;
+             background-repeat: no-repeat;
+             background-size: cover;
+             }
+            
+            @media only screen and (max-width: 600px) {
+            .header-img{
+             background:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                           ), url('/homepage_small.jpg'); 
+             height: 30vh;
+                        }
+             }
+            
+             @media only screen and (min-width: 601px) {
+             .header-img{
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                           ), url('/homepage_large.jpg'); 
+                         }
+             }
+             
+             //center the messages on the background img
+             .welcome-messages{
+              max-width: 80%;
+              margin-left: 10%;
+              margin-right: 10%;
+              height: 100vh;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              align-content: center;
+              justify-content: space-around;
+             }
+             
+             //to hide the description on mobile
+             @media only screen and (max-width: 600px) {
+             .welcome-messages :global(.description) {
+              display: none;
+                    }  
+             }  
+             
+             .welcome-message-venture{
+              text-align: center;
+              }
+              
+             .welcome-message-development{
+              text-align: center;
+              }
+              
+             .customers{
+              max-width: 100%;
+              margin: 0 auto; /* will automatically align center */
+              padding: 24px 0;
+              }
+             
+             @media only screen and (max-width: 600px) {
+             .customers{
+             width: 80%;
+                         }
+             }
+             
+             @media only screen and (min-width: 601px) {
+             .customers{
+              width: 60%;
+                         }
+             }
+                                                        
+              //text color for "Our Customers"
+             .customers
+              h2 {
+                  color: #8c8c8c;
+              }
+       
+             `}</style>
+      </div>
   )
 }
+
+export default Home
