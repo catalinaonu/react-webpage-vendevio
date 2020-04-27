@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 //antd
+import {Input} from 'antd';
 import {Upload, message, Button} from 'antd';
 import {UploadOutlined} from '@ant-design/icons';
 
@@ -8,8 +9,9 @@ import {UploadOutlined} from '@ant-design/icons';
 //components
 import Form from "./Form";
 import InputField from "./InputField";
+import ButtonForm from "./ButtonForm";
 
-
+//for upload button
 const props = {
     name: 'file',
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -28,43 +30,65 @@ const props = {
     },
 };
 
+
 const ContactFormVentures = ({onSubmit}) => {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [text, setText] = useState('')
 
     return (
-        <div>
+        <div className="contact-form-ventures">
             <Form
                 onSubmit={event => {
                     onSubmit(company, email, text);
                     event.preventDefault();
                 }}
             >
-                <InputField value={company} onChange={setCompany}>
-                    Venture/Startup:
-                </InputField>
+                <div className="field">
+                    <InputField value={company} onChange={setCompany}>
+                        Venture/Startup:
+                    </InputField>
+                </div>
 
-                <InputField value={text} onChange={setText}>
-                    Idee in einem Satz
-                </InputField>
+                <div className="field">
+                    <InputField value={text} onChange={setText}>
+                        Idee in einem Satz:
+                    </InputField>
+                </div>
 
-                <InputField value={email} onChange={setEmail}>
-                    Email:
-                </InputField>
+                <div className="field">
+                    <InputField value={email} onChange={setEmail}>
+                        Email:
+                    </InputField>
+                </div>
 
-                <span> Pitch Deck </span> <Upload {...props}>
+                <div className="field">
+                    <Upload {...props}>
 
-                <Button>
-                    <UploadOutlined/> Click to Upload
-                </Button>
-            </Upload>
+                        <Button>
+                            <UploadOutlined/> Click to Upload
+                        </Button>
+                    </Upload>
+                </div>
 
-                <Button type="ghost" htmlType="submit">
-                    Jetzt kontaktieren
-                </Button>
+                <div className="field">
+                    <ButtonForm type="primary" htmlType="submit">
+                        Jetzt kontaktieren
+                    </ButtonForm>
+                </div>
 
             </Form>
+            <style jsx>{`
+            .contact-form-ventures {
+             // width: 100%;
+            }
+            
+            .field {
+             padding-bottom: 20px;
+            }
+              
+            `}</style>
+
         </div>
 
     )

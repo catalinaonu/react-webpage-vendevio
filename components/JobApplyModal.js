@@ -1,6 +1,6 @@
 import JobApplyForm from "./JobApplyForm";
 import React, {useState} from 'react'
-import Button from "./Button";
+import Button from "./ButtonForm";
 
 const JobApplyModal = () => {
     const [visible, setVisible] = useState(false);

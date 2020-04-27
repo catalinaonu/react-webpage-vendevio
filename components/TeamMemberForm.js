@@ -18,6 +18,13 @@ const TeamMemberForm = ({teamMember}) => (
                 <div>{teamMember.email}</div>
             </div>
         </Card>
+        <style jsx>{`
+        .additional{
+         padding-top: 10px;
+         color: #8c8c8c;
+        }
+        
+        `}</style>
     </div>
 )
 

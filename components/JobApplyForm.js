@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 
 
 // components
-import Button from "./Button";
+import Button from "./ButtonForm";
 import Form from "./Form";
 import InputField from "./InputField";
 

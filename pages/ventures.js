@@ -32,7 +32,6 @@ import team from "../components/Data/team_info";
 import welcomeMessage from "../components/Data/welcome_info";
 
 
-
 function Ventures() {
     return (
         <div>
@@ -65,7 +64,7 @@ function Ventures() {
                         {/*link to contact form*/}
                         <div className="link-contact-form">
                             <Link href="#contact-form-ventures">
-                                <a title="Ventures Page"><Button ghost size="large">jetzt bewerben</Button></a>
+                                <a title="Ventures Page"><Button ghost size="large">JETZT BEWERBEN</Button></a>
                             </Link>
                         </div>
                     </section>
@@ -133,8 +132,12 @@ function Ventures() {
             {/*contact form*/}
             <section className="contact-form-section">
                 <div id="contact-form-ventures">
-                    <TeamMemberForm teamMember={team["Kambis"]}/>
-                    <ContactFormVentures/>
+                    <div className="team-member">
+                        <TeamMemberForm teamMember={team["Kambis"]}/>
+                    </div>
+                    <div className="contact-form">
+                        <ContactFormVentures/>
+                    </div>
                 </div>
             </section>
 
@@ -206,8 +209,7 @@ function Ventures() {
           
               .card-wrapper-services {
                max-width: 100%;
-               margin: 0px auto;
-               padding: 24px 0px;
+               margin: 24px auto;
                max-width: 80%;             
               }
                              
@@ -217,7 +219,7 @@ function Ventures() {
                                 background: #364d79;
                                 overflow: hidden;
                                 max-width: 100%;
-                                margin: 24px auto;
+                                margin: 48px auto;
                                 padding-bottom: 24px;
                                 }
                                 
@@ -227,8 +229,7 @@ function Ventures() {
                margin: 24px auto;
                  }
               }                   
-    
-                              
+       
             .carousel-customers 
              div {
                margin-left: 24px;
@@ -237,10 +238,50 @@ function Ventures() {
             .customers-section {
               background: #364d79;
             }                    
-                                
-            #contact-form-ventures {
-            display: flex;
+                
+            // center the contact form                    
+            #contact-form-ventures{
+             display: flex;
+             max-width: 100%;   
+             }
+                      
+            //Prevent flexbox shrinking
+            .contact-form {
+             flex: 1;
+             }
+             
+             .team-member {
+             flex: 1;
+             }
+
+            @media only screen and (max-width: 600px) {
+             #contact-form-ventures {
+              flex-direction: column;
+              flex-flow: flex-direction; 
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+              margin: 24px auto;
+              
             }
+            .contact-form {
+             padding-top: 24px; 
+             }
+            
+             }
+             
+             @media only screen and (min-width: 601px) { 
+              #contact-form-ventures {
+              flex-direction: row;
+              max-width: 50%;
+              margin: 48px auto;
+              flex-flow: flex-direction; 
+              justify-content: space-between;
+              align-items: center;
+               }
+             }
+            
+            
              
             
             `}</style>
