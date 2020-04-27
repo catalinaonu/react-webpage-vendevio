@@ -4,10 +4,11 @@ import React from "react";
 import {Row, Col, Slider} from 'antd';
 import {Carousel} from 'antd';
 import {Button} from 'antd';
-import { Divider } from 'antd';
+
 
 // next
 import Head from "next/head";
+import Link from "next/link";
 
 // components
 import Footer from "../components/Footer";
@@ -29,7 +30,7 @@ import values from "../components/Data/values";
 import vision from "../components/Data/vision_list";
 import team from "../components/Data/team_info";
 import welcomeMessage from "../components/Data/welcome_info";
-import Link from "next/link";
+
 
 
 function Ventures() {
@@ -191,7 +192,7 @@ function Ventures() {
              //style the vision list
              .card-wrapper-vision {
               max-width: 100%;
-              margin: 24px auto;
+              margin: 0px auto;
               padding: 24px;
               background: #002766;
              }
@@ -205,10 +206,9 @@ function Ventures() {
           
               .card-wrapper-services {
                max-width: 100%;
-               margin: 48px auto;
-               padding: 24px;
-               max-width: 80%;
-             
+               margin: 0px auto;
+               padding: 24px 0px;
+               max-width: 80%;             
               }
                              
             .carousel-customers {  
@@ -216,17 +216,26 @@ function Ventures() {
                                 height: 240px;
                                 background: #364d79;
                                 overflow: hidden;
-                                max-width: 60%;
+                                max-width: 100%;
                                 margin: 24px auto;
+                                padding-bottom: 24px;
                                 }
                                 
-             .carousel-customers 
-              div {
-                margin-left: 24px;
+             @media only screen and (min-width: 601px) {
+              .carousel-customers {
+               max-width: 60%;
+               margin: 24px auto;
+                 }
+              }                   
+    
+                              
+            .carousel-customers 
+             div {
+               margin-left: 24px;
              }
                                 
             .customers-section {
-            background: #364d79;
+              background: #364d79;
             }                    
                                 
             #contact-form-ventures {

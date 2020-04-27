@@ -13,6 +13,10 @@ const TeamMemberForm = ({teamMember}) => (
             <Meta title={teamMember.name}
                   description={teamMember.title}
             />
+            <div className="additional">
+                <div>{teamMember.phone}</div>
+                <div>{teamMember.email}</div>
+            </div>
         </Card>
     </div>
 )

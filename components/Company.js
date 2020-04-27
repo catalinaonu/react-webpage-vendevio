@@ -8,7 +8,7 @@ const Company = ({company}) => (
                 bordered={false}
                 hoverable={true}
 
-                style={{ width: 480, height:240, textAlign: 'left', background: '#364d79', color: '#FFFFFF', fontSize:18}}
+                style={{ width: 400, height:240, textAlign: 'left', background: '#364d79', color: '#FFFFFF', fontSize:18}}
             >
                     {/*{company.id}*/}
                     <div className="content-wrapper">
@@ -30,7 +30,6 @@ const Company = ({company}) => (
              
              .logo-customers {
               padding-right: 24px;
-          
              }
             
             `}</style>
