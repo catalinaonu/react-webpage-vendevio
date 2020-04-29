@@ -51,19 +51,19 @@ function Team() {
 
             {/*values/divider*/}
             <section className="values-section">
-            <Value value={values["team"]["unsere-werte"]}/>
+                <Value value={values["team"]["unsere-werte"]}/>
             </section>
 
             {/* services with photo and description*/}
             <section className="services-section">
-            <Service service={services["team"]["coding_it_the_right_way"]}/>
-            <Service service={services["team"]["love_what_you_do"]}/>
-            <Service service={services["team"]["coding_it_the_right_way"]}/>
+                <Service service={services["team"]["coding_it_the_right_way"]}/>
+                <Service service={services["team"]["love_what_you_do"]}/>
+                <Service service={services["team"]["coding_it_the_right_way"]}/>
             </section>
 
             {/*values/divider*/}
             <section className="values-section">
-            <Value value={values["team"]["unsere-helden"]}/>
+                <Value value={values["team"]["unsere-helden"]}/>
             </section>
 
             {/*Photos of the entire team*/}
