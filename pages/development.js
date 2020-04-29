@@ -78,7 +78,7 @@ const Development = () => {
             {/*vision_list*/}
 
             <section className="vision-section">
-                <div className="card-wrapper">
+                <div className="card-wrapper-vision">
                     <Row gutter={[16, 16]} justify="center">
                         <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
                             <Vision visionMessage={vision["development"]["projektmanagement"]}/>
@@ -96,17 +96,24 @@ const Development = () => {
                 </div>
             </section>
 
-
-            {/*customers*/}
-            <section className="customers-section">
-                <Carousel autoplay>
-                    <Company company={companies["Freebiebox"]}/>
-                    <Company company={companies["Delta"]}/>
-                    <Company company={companies["Seekyou"]}/>
-                    <Company company={companies["LeadStudy"]}/>
-                    <Company company={companies["PrimeCrowd"]}/>
-                    <Company company={companies["Carployee"]}/>
-                </Carousel>
+            {/*ServicesList with image and description*/}
+            <section className="services-section">
+                <div className="card-wrapper-services">
+                    <Row gutter={[16, 32]} justify="center">
+                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
+                            <Service service={services["development"]["technische-konzeption"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
+                            <Service service={services["development"]["technische_implementierung"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
+                            <Service service={services["development"]["qualitätssicherung"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
+                            <Service service={services["development"]["kundensupport"]}/>
+                        </Col>
+                    </Row>
+                </div>
             </section>
 
             {/*values/divider*/}
@@ -114,22 +121,32 @@ const Development = () => {
                 <Value value={values["development"]["leistungen_development"]}/>
             </section>
 
-            <section className="services-section">
-                <h1>SERVICES</h1>{/*ServicesList with image and description*/}
-                <Service service={services["development"]["technische-konzeption"]}/>
-                <Service service={services["development"]["technische_implementierung"]}/>
-                <Service service={services["development"]["qualitätssicherung"]}/>
-                <Service service={services["development"]["kundensupport"]}/>
+
+            {/*customers*/}
+            <section className="customers-section">
+                <div className="carousel-customers">
+                    <Carousel autoplay>
+                        <div><Company company={companies["Freebiebox"]}/></div>
+                        <div><Company company={companies["Delta"]}/></div>
+                        <div><Company company={companies["Seekyou"]}/></div>
+                        <div><Company company={companies["LeadStudy"]}/></div>
+                        <div><Company company={companies["PrimeCrowd"]}/></div>
+                        <div><Company company={companies["Carployee"]}/></div>
+                    </Carousel>
+                </div>
             </section>
+
 
             {/*form contact*/}
             <section className="contact-form-section">
                 <div id="contact-form-development">
-                    <TeamMemberForm teamMember={team["Stefan"]}/>
-                    <div>
-                        <Card style={{width: 500}}>
-                            <ContactFormDevelopment/>
-                        </Card>
+                    <div className="team-member">
+                        <TeamMemberForm teamMember={team["Stefan"]}/>
+                    </div>
+                    <div className="contact-form">
+                        {/*<Card style={{width: 500}}>*/}
+                        <ContactFormDevelopment/>
+                        {/*</Card>*/}
 
                     </div>
                 </div>
@@ -187,11 +204,104 @@ const Development = () => {
               padding-bottom: 24px;
              }
              
+            
+            //style the vision list
+             .card-wrapper-vision {
+              max-width: 100%;
+              margin: 24px auto;
+              padding: 24px;
+              background: #002766;
+             }
+             
+             //center the vision list for desktop
+             @media only screen and (min-width: 601px) {
+              .card-wrapper-vision {
+                max-width: 60%;        
+                  }
+              }              
+          
+              .card-wrapper-services {
+               max-width: 100%;
+               margin: 24px auto;
+               max-width: 80%;             
+              }
+              
+               @media only screen and (min-width: 601px) {
+                .card-wrapper-services {
+                 margin: 48px auto;
+                  }
+               }
+                             
+            .carousel-customers {  
+                                text-align: center;
+                                height: 240px;
+                                background: #364d79;
+                                overflow: hidden;
+                                max-width: 100%;
+                                margin: 48px auto;
+                                padding-bottom: 24px;
+                                }
+                                
+            @media only screen and (min-width: 601px) {
+             .carousel-customers {
+              max-width: 60%;
+              margin: 24px auto;
+                 }
+             }                   
+       
+            .carousel-customers 
+             div {
+               margin-left: 24px;
+             }
+                                
+            .customers-section {
+              background: #364d79;
+            }                    
                 
-            #contact-form-development {
+            // center the contact form                    
+            #contact-form-development{
              display: flex;
-                         }
-           
+             max-width: 100%;   
+             }
+                      
+            //Prevent flexbox shrinking
+            .contact-form {
+             flex: 1;
+             }
+             
+             .team-member {
+             flex: 1;
+             }
+
+            @media only screen and (max-width: 600px) {
+             #contact-form-development {
+             flex-direction: column;
+             flex-flow: flex-direction; 
+             justify-content: center;
+             align-items: center;
+             align-content: center;
+             margin:0 24px;
+               }
+            .contact-form {
+             padding-top: 24px; 
+             margin: 24px auto;
+             }
+            
+             }
+             
+             @media only screen and (min-width: 601px) { 
+              #contact-form-development{
+              flex-direction: row;
+              max-width: 50%;
+              margin: 48px auto;
+              flex-flow: flex-direction; 
+              justify-content: space-between;
+              align-items: center;
+               }
+             }
+            
+                    
+                    
             `}</style>
         </div>
     )

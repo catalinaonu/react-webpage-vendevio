@@ -26,11 +26,15 @@ const Company = ({company}) => (
              align-items: center;
              align-content: space-between;
              height: 200px;
+             font-weight: 300;
              }
              
              .logo-customers {
               padding-right: 24px;
+              
              }
+             
+             
             
             `}</style>
     </div>

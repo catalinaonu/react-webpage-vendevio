@@ -44,25 +44,18 @@ const ContactFormVentures = ({onSubmit}) => {
                     event.preventDefault();
                 }}
             >
-                <div className="field">
                     <InputField value={company} onChange={setCompany}>
                         Venture/Startup:
                     </InputField>
-                </div>
 
-                <div className="field">
                     <InputField value={text} onChange={setText}>
                         Idee in einem Satz:
                     </InputField>
-                </div>
-
-                <div className="field">
-                    <InputField value={email} onChange={setEmail}>
+                 <InputField value={email} onChange={setEmail}>
                         Email:
                     </InputField>
-                </div>
 
-                <div className="field">
+                <div className="button-contact-form-ventures">
                     <Upload {...props}>
 
                         <Button>
@@ -71,7 +64,7 @@ const ContactFormVentures = ({onSubmit}) => {
                     </Upload>
                 </div>
 
-                <div className="field">
+                <div className="button-contact-form-ventures">
                     <ButtonForm type="primary" htmlType="submit">
                         Jetzt kontaktieren
                     </ButtonForm>
@@ -79,13 +72,11 @@ const ContactFormVentures = ({onSubmit}) => {
 
             </Form>
             <style jsx>{`
-            .contact-form-ventures {
-             // width: 100%;
+                    
+            .button-contact-form-ventures{
+            padding-top: 24px;
             }
-            
-            .field {
-             padding-bottom: 20px;
-            }
+          
               
             `}</style>
 

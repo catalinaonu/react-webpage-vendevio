@@ -1,21 +1,20 @@
 import React, {useState} from "react";
 import Form from "./Form";
 import InputField from "./InputField";
-import {Button, } from "antd";
-import { Input } from 'antd';
+import {Button,} from "antd";
 
-const { TextArea } = Input;
 
 const ContactFormDevelopment = ({onSubmit}) => {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('')
+    const [text, setText] = useState('')
 
     return (
         <div>
             <Form
                 onSubmit={event => {
-                    onSubmit(company, email, text);
+                    onSubmit(company, email, text, phone);
                     event.preventDefault();
                 }}
             >
@@ -28,18 +27,24 @@ const ContactFormDevelopment = ({onSubmit}) => {
                 </InputField>
 
                 <InputField value={phone} onChange={setPhone}>
-                   Phone:
+                    Phone:
                 </InputField>
 
-
-                Kurzbeschreibung Anfrage:
-                <TextArea rows={4}/>
-
-                <Button type="primary" htmlType="submit">
-                    Jetzt kontaktieren
-                </Button>
+                <InputField value={text} onChange={setText}>
+                    Kurzbeschreibung Anfrage:
+                </InputField>
+                <div className="button-contact-form-development">
+                    <Button type="primary" htmlType="submit">
+                        Jetzt kontaktieren
+                    </Button>
+                </div>
 
             </Form>
+            <style jsx>{`
+            .button-contact-form-development {
+             padding-top: 24px;
+            }
+            `}</style>
         </div>
 
     )

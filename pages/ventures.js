@@ -1,7 +1,7 @@
 import React from "react";
 
 //antd
-import {Row, Col, Slider} from 'antd';
+import {Row, Col, Slider, Card} from 'antd';
 import {Carousel} from 'antd';
 import {Button} from 'antd';
 
@@ -30,6 +30,7 @@ import values from "../components/Data/values";
 import vision from "../components/Data/vision_list";
 import team from "../components/Data/team_info";
 import welcomeMessage from "../components/Data/welcome_info";
+import ContactFormDevelopment from "../components/ContactFormDevelopment";
 
 
 function Ventures() {
@@ -141,6 +142,7 @@ function Ventures() {
                 </div>
             </section>
 
+
             <Footer/>
             <style jsx>{`
             .header-img {
@@ -212,6 +214,12 @@ function Ventures() {
                margin: 24px auto;
                max-width: 80%;             
               }
+              
+               @media only screen and (min-width: 601px) {
+                .card-wrapper-services {
+                margin: 48px auto;
+               }
+               }
                              
             .carousel-customers {  
                                 text-align: center;
@@ -223,12 +231,12 @@ function Ventures() {
                                 padding-bottom: 24px;
                                 }
                                 
-             @media only screen and (min-width: 601px) {
-              .carousel-customers {
-               max-width: 60%;
-               margin: 24px auto;
+            @media only screen and (min-width: 601px) {
+             .carousel-customers {
+              max-width: 60%;
+              margin: 24px auto;
                  }
-              }                   
+             }                   
        
             .carousel-customers 
              div {
@@ -261,7 +269,7 @@ function Ventures() {
               justify-content: center;
               align-items: center;
               align-content: center;
-              margin: 24px auto;
+              margin: 0 24px;
               
             }
             .contact-form {
