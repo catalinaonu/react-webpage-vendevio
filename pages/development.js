@@ -52,14 +52,14 @@ const Development = () => {
                     </div>
 
                     {/*message header*/}
-                    <section className="welcome-messages">
+                    <section className="welcome-messages-development">
                         <div className="welcome-message-development">
                             <WelcomeMessage welcomeMessage={welcomeMessage["development_page"]}/>
                         </div>
 
 
                         {/*link to contact form*/}
-                        <div className="link-contact-form">
+                        <div className="link-contact-form-development">
                             <Link href="#contact-form-development">
                                 <a title="Development Page"><Button ghost size="large">jetzt bewerben</Button></a>
                             </Link>
@@ -70,15 +70,15 @@ const Development = () => {
             </header>
 
             {/*values/divider*/}
-            <section className="values-section">
+            <section className="values-section-development">
                 <Value value={values["development"]["projectmanagement"]}/>
             </section>
 
 
             {/*vision_list*/}
 
-            <section className="vision-section">
-                <div className="card-wrapper-vision">
+            <section className="vision-section-development">
+                <div className="card-wrapper-vision-development">
                     <Row gutter={[16, 16]} justify="center">
                         <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
                             <Vision visionMessage={vision["development"]["projektmanagement"]}/>
@@ -97,8 +97,8 @@ const Development = () => {
             </section>
 
             {/*ServicesList with image and description*/}
-            <section className="services-section">
-                <div className="card-wrapper-services">
+            <section className="services-section-development">
+                <div className="card-wrapper-services-development">
                     <Row gutter={[16, 32]} justify="center">
                         <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
                             <Service service={services["development"]["technische-konzeption"]}/>
@@ -117,14 +117,14 @@ const Development = () => {
             </section>
 
             {/*values/divider*/}
-            <section className="values-section">
+            <section className="values-section-development">
                 <Value value={values["development"]["leistungen_development"]}/>
             </section>
 
 
             {/*customers*/}
-            <section className="customers-section">
-                <div className="carousel-customers">
+            <section className="customers-section-development">
+                <div className="carousel-customers-development">
                     <Carousel autoplay>
                         <div><Company company={companies["Freebiebox"]}/></div>
                         <div><Company company={companies["Delta"]}/></div>
@@ -138,12 +138,12 @@ const Development = () => {
 
 
             {/*form contact*/}
-            <section className="contact-form-section">
+            <section className="contact-form-section-develipment">
                 <div id="contact-form-development">
-                    <div className="team-member">
+                    <div className="team-member-development">
                         <TeamMemberForm teamMember={team["Stefan"]}/>
                     </div>
-                    <div className="contact-form">
+                    <div className="contact-form-development">
                         {/*<Card style={{width: 500}}>*/}
                         <ContactFormDevelopment/>
                         {/*</Card>*/}
@@ -187,7 +187,7 @@ const Development = () => {
              }
              
              //center the messages on the background img
-             .welcome-messages{
+             .welcome-messages-development{
               max-width: 50%;
               margin-left: 25%;
               margin-right: 25%;
@@ -206,7 +206,7 @@ const Development = () => {
              
             
             //style the vision list
-             .card-wrapper-vision {
+             .card-wrapper-vision-development {
               max-width: 100%;
               margin: 24px auto;
               padding: 24px;
@@ -215,24 +215,26 @@ const Development = () => {
              
              //center the vision list for desktop
              @media only screen and (min-width: 601px) {
-              .card-wrapper-vision {
+              .card-wrapper-vision-development {
                 max-width: 60%;        
                   }
               }              
           
-              .card-wrapper-services {
+              .card-wrapper-services-development {
                max-width: 100%;
-               margin: 24px auto;
-               max-width: 80%;             
+               margin-left: 20%;
+               margin:right: 20%;
+                       
               }
               
                @media only screen and (min-width: 601px) {
-                .card-wrapper-services {
+                .card-wrapper-services-development {
                  margin: 48px auto;
+                 max-width: 80%; 
                   }
                }
                              
-            .carousel-customers {  
+            .carousel-customers-development {  
                                 text-align: center;
                                 height: 240px;
                                 background: #364d79;
@@ -243,18 +245,18 @@ const Development = () => {
                                 }
                                 
             @media only screen and (min-width: 601px) {
-             .carousel-customers {
+             .carousel-customers-development {
               max-width: 60%;
               margin: 24px auto;
                  }
              }                   
        
-            .carousel-customers 
+            .carousel-customers-development 
              div {
                margin-left: 24px;
              }
                                 
-            .customers-section {
+            .customers-section-development {
               background: #364d79;
             }                    
                 
@@ -265,11 +267,11 @@ const Development = () => {
              }
                       
             //Prevent flexbox shrinking
-            .contact-form {
+            .contact-form-development {
              flex: 1;
              }
              
-             .team-member {
+             .team-member-development {
              flex: 1;
              }
 
@@ -282,7 +284,7 @@ const Development = () => {
              align-content: center;
              margin:0 24px;
                }
-            .contact-form {
+            .contact-form-development {
              padding-top: 24px; 
              margin: 24px auto;
              }

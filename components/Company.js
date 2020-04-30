@@ -3,7 +3,7 @@ import {Card} from 'antd';
 
 
 const Company = ({company}) => (
-        <div clssName="card-customers">
+        <div className="card-customers">
             <Card
                 bordered={false}
                 hoverable={true}
@@ -33,8 +33,8 @@ const Company = ({company}) => (
               padding-right: 24px;
               
              }
-             
-             
+     
+            
             
             `}</style>
     </div>

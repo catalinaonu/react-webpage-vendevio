@@ -34,7 +34,7 @@ const team = {
     },
     "Albert": {
         "name": "Albert Vogl-Bader",
-        "title": "Advisor/Managing Partner",
+        "title": "Advisor/ Managing Partner",
         "photo_business": <img src='/albert_business.jpg'/>,
         "photo_goody": <img src='/albert_goody.jpg'/>,
         "motto": "Think big and just do it",
@@ -45,7 +45,7 @@ const team = {
     },
     "Gernot": {
         "name": "Gernot Panholzer",
-        "title": "Frontend Developer/Managing Partner",
+        "title": "Frontend Developer/ Managing Partner",
         "photo_business": <img src='/gernot_business.jpg'/>,
         'photo_goody': <img src='gernot_goody.jpg'/>,
         "motto": "Life is a goody",
@@ -68,7 +68,7 @@ const team = {
 
     "Karina": {
         "name": "Karina Streng",
-        "title": "Change Master/CTO-as-a-Service",
+        "title": "Change Master/ CTO-as-a-service",
         "photo_business": <img src='/karina_business.jpg'/>,
         "photo_goody": <img src='/karina_goody.jpg'/>,
         "motto": "Develop people to become happy.",
@@ -79,7 +79,7 @@ const team = {
     },
     "Leo": {
         "name": "Leo Jungmann",
-        "title": "Mobile Developer/Fullstack Developer",
+        "title": "Mobile Developer/ Fullstack Developer",
         "photo_business": <img src='/leo_business.jpg'/>,
         "photo_goody": <img src='/leo_goody.jpg' />,
         "motto": "Just go for it!",
@@ -112,7 +112,7 @@ const team = {
     },
     "Ersin": {
         "name": "Ersin Erguel",
-        "title": "Index Developer",
+        "title": "App Developer",
         "photo_business": <img src='/ersin_business.jpg'/>,
         "photo_goody": <img src='/ersin_goody.jpg' />,
         "motto": "",
@@ -134,7 +134,7 @@ const team = {
     },
     "Sebastian": {
         "name": "Sebastian Feistl",
-        "title": "Index Developer/Web developer",
+        "title": "Mobile Developer/ Web developer",
         "photo_business": <img src='/sebastian_business.jpg'/>,
         "photo_goody": <img src='/sebastian_goody.jpg'/>,
         "motto": "",
@@ -144,8 +144,8 @@ const team = {
         "xing": ""
     },
     "Raphael": {
-        "name": "Raphael kimeswenger",
-        "title": "Fullstack Developer/Project Manager",
+        "name": "Raphael Kimeswenger",
+        "title": "Fullstack Developer/ Project Manager",
         "photo_business": <img src='/raphael_business.jpg'/>,
         "photo_goody": <img src='/raphael_goody.jpg'/>,
         "motto": "",
@@ -156,7 +156,7 @@ const team = {
     },
     "Dominik": {
         "name": "Dominik Nigl",
-        "title": "Index Developer/Web Developer",
+        "title": "App Developer/ Web Developer",
         "photo_business": <img src='/dominik_business.jpg'/>,
         "photo_goody": <img src='/dominik_goody.jpg'/>,
         "motto": "",
@@ -167,7 +167,7 @@ const team = {
     },
     "Florian": {
         "name": "Florian Daniel",
-        "title": "Fullstack Developer/Growth Hacker",
+        "title": "Fullstack Developer/ Growth Hacker",
         "photo_business": <img src='/florian_business.jpg'/>,
         "photo_goody": <img src='/florian_goody.jpg'/>,
         "motto": "",
@@ -178,7 +178,7 @@ const team = {
     },
     "Lukas": {
         "name": "Lukas Krainz",
-        "title": "Marketing Master Mind/Managing Expert",
+        "title": "Marketing Master Mind/ Managing Expert",
         "photo_business": <img src='/lukas_business.jpg'/>,
         "photo_goody": <img src='/lukas_goody.jpg'/>,
         "motto": "There is always a better way",
@@ -189,7 +189,7 @@ const team = {
     },
     "Mathias": {
         "name": "Mathias Maier",
-        "title": "Developer Master Mind/Managing Expert",
+        "title": "Developer Master Mind/ Managing Expert",
         "photo_business": <img src='/mathias_business.jpg'/>,
         "photo_goody":<img src='/mathias_goody.jpg'/>,
         "motto": "",

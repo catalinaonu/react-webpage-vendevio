@@ -15,13 +15,16 @@ export default function MyApp({Component, pageProps}) {
                                    font-weight: 400;
                                    font-style: normal;
                                    font-display: swap;
-                                   }
+                                       }
                                    
                                    * { 
                                      margin: 0;
                                      padding: 0;
                                      box-sizing: border-box;
                                     }
+                                    
+                                    body {
+                                    background-color: #fafafa;}
                                    
                                  
                             `}</style>

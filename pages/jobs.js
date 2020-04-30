@@ -72,7 +72,7 @@ function Jobs() {
 
             {/* values/divider*/}
             <section className="values-section">
-                <Value value={values["job"]["aktuelle-stellen"]}/>
+                <Value value={values["job"]["join-vendevio"]}/>
             </section>
 
             {/*List of jobs*/}

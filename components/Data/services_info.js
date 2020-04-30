@@ -48,17 +48,17 @@ const services = {
         "coding_it_the_right_way": {
             "img": <img src='/growth.svg'/>,
             "title": "Coding it the right way",
-            "description": "Strive for Excellence"
+            // "description": "Strive for Excellence"
         },
         "love_what_you_do": {
             "img": <img src='/passion.svg'/>,
             "title": "Love what you do",
-            "description": "Do it with passion"
+            // "description": "Do it with passion"
         },
         "never_stop_innovating": {
             "img": <img src='/strive_for_excellence.svg'/>,
             "title": "Never stop inovating",
-            "description": "Pursue sustainable growth"
+            // "description": "Pursue sustainable growth"
         }
     },
     "jobs": {

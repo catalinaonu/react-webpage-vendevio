@@ -5,7 +5,7 @@ const Value = ({value}) => (
         <style jsx>{`
         .values {
          text-align: center;
-         padding: 48px 0;
+         margin: 48px 0;;
          font-weight: 400;
         }
         
