@@ -3,14 +3,17 @@ import Service from "./Service"
 //data files
 import services from "./Data/services_info";
 
+import React from "react";
+
 const keys = Object.keys(services)
 
 const ServicesList = () => (
-    <ul>
+    <div>
         {keys.map(key =>
             <Service key={key} service={services[key]}/>
         )}
-    </ul>
+    </div>
 )
 
- export default ServicesList
+export default ServicesList
+

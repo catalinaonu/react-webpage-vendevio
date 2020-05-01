@@ -2,6 +2,7 @@ import React from "react";
 
 //antd
 import {Button} from 'antd';
+import {Col, Row} from "antd";
 
 //next
 import Link from "next/link";
@@ -64,10 +65,22 @@ function Jobs() {
 
             {/*services*/}
             <section className="services-section">
-                <Service service={services["jobs"]["coding"]}/>
-                <Service service={services["jobs"]["team-and-remote"]}/>
-                <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
-                <Service service={services["jobs"]["gründe-neue-ventures"]}/>
+                <div className="card-wrapper-services-jobs">
+                    <Row>
+                        <Col>
+                            <Service service={services["jobs"]["coding"]}/>
+                        </Col>
+                        <Col>
+                            <Service service={services["jobs"]["team-and-remote"]}/>
+                        </Col>
+                        <Col>
+                            <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
+                        </Col>
+                        <Col>
+                            <Service service={services["jobs"]["gründe-neue-ventures"]}/>
+                        </Col>
+                    </Row>
+                </div>
             </section>
 
             {/* values/divider*/}
@@ -82,19 +95,14 @@ function Jobs() {
                 </div>
             </section>
 
-            {/*team photo*/}
-            <img src="/jobs_team.jpg"/>
+
+            {/*values/divider*/}
+            <section className="values-section">
+                <Value value={values["job"]["meet-us"]}/>
+            </section>
 
             {/*map image*/}
             <img src="/map.jpg"/>
-
-            {/*people*/}
-            <section className="team-section">
-                <TeamMemberJobsPage member={team["Karina"]}/>
-                <TeamMemberJobsPage member={team["Leo"]}/>
-                <TeamMemberJobsPage member={team["Gernot"]}/>
-                <TeamMemberJobsPage member={team["Moritz"]}/>
-            </section>
 
             <Footer/>
             <style jsx>{`
@@ -151,7 +159,10 @@ function Jobs() {
               padding-bottom: 100px;
               padding-right: 100px;
                 }
-              }             
+              }       
+              
+              .card-wrapper-services-jobs :global(.card-wrapper-services-jobs){
+              }      
  
             `}</style>
 

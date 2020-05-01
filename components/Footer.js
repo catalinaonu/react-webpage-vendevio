@@ -11,9 +11,8 @@ const Footer = () => {
             <Divider style={{height: '2px'}}/>
             <footer className="footer-container">
                 <div className="contact-section">
-
-                    <Row>
-                        <Col xs={{span: 11, offset: 1}} lg={{span: 6, offset: 2}}>
+                    <Row justify="space-between">
+                        <Col xs={{span: 7, offset: 1}} lg={{span: 5, offset: 3}}>
                             <div id="contact" className="footer-subsection">
                                 <h3>Contact</h3>
                                 {/*phone icon*/}
@@ -24,12 +23,11 @@ const Footer = () => {
                                     </div>
                                 </Col>
 
-
                                 {/*mail icon*/}
                                 <Col>
                                     <div className="icons-list">
                                         <MailOutlined/>
-                                        <a title="Email" href="mailto: team@vendevio.com"> team@vendevio.com </a>
+                                        <a title="Email" href="mailto: team@vendevio.com">team@vendevio.com</a>
                                     </div>
                                 </Col>
 
@@ -38,7 +36,7 @@ const Footer = () => {
                                     <div className="icons-list">
                                         <HomeOutlined/>
                                         <a href="https://www.google.com/maps/place/Peter-Behrens-Platz+10,+4020+Linz/@48.3116971,14.2964308,17z/data=!3m1!4b1!4m5!3m4!1s0x47739827b6f0861d:0xe495ce0cf50bf5a3!8m2!3d48.3116936!4d14.2986195"
-                                           target="_blank" title="address"> Peter-Behrens-Platz 10, 4020 Linz,
+                                           target="_blank" title="address">Peter-Behrens-Platz 10, 4020 Linz,
                                             Österreich
                                         </a>
                                     </div>
@@ -47,7 +45,7 @@ const Footer = () => {
                         </Col>
 
                         {/*Important*/}
-                        <Col xs={{span: 5, offset: 1}} lg={{span: 6, offset: 2}}>
+                        <Col xs={{span: 5, offset: 3}} lg={{span: 5, offset: 3}}>
                             <div id="important" className="footer-subsection">
                                 <h3>Important</h3>
                                 <Col>
@@ -64,7 +62,7 @@ const Footer = () => {
                         </Col>
 
                         {/*Social Media*/}
-                        <Col xs={{span: 5, offset: 1}} lg={{span: 6, offset: 2}}>
+                        <Col xs={{span: 5, offset: 3}} lg={{span: 5, offset: 3}}>
                             <div id="social-media" className="footer-subsection">
                                 <h3> Follow Us </h3>
                                 <Row>
@@ -94,47 +92,22 @@ const Footer = () => {
                     </Row>
                 </div>
 
-                {/*hr*/}
-                {/*<div className="divider">*/}
-                {/*    <Divider orientation="left" />*/}
-                {/*</div>*/}
-
                 {/*rights Section*/}
                 <div className="rights-section">
                     <Row justify="space-between">
-                        <Col xs={{span: 11, offset: 1}} lg={{span: 10, offset: 2}}><p> @2019 All rights reserved by
+                        <Col xs={{span: 11, offset: 1}} lg={{span: 8, offset: 3}}><p> @2019 All rights reserved by
                             vendevio </p></Col>
-                        <Col xs={{span: 11, offset: 1}} lg={{span: 6, offset: 6}}><p> made with <HeartTwoTone
+                        <Col xs={{span: 9, offset: 3}} lg={{span: 5, offset: 6}}><p> made with <HeartTwoTone
                             twoToneColor="#52c41a"/> in Austria </p></Col>
                     </Row>
                 </div>
             </footer>
             <style jsx>{`
-            .footer-container {
-            width:100%;
-            background-color: #fafafa;
-            color: #8c8c8c;
-            padding-top: 10px;
+             .footer-container{
+              font-size: 14px;
              }
-                 
-            h3 {
-            color: #8c8c8c;
-            }
-                 
-            a {
-            text-decoration-none;
-            color: #8c8c8c;
-            }
-             
-            a:hover {
-                opacity: 0.6;
-            }
-            
-            
-            }
-            
-                                 
-            `}</style>
+              
+          `}</style>
 
         </>
 

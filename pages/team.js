@@ -182,12 +182,12 @@ function Team() {
              }
             
                        
-            // @media only screen and (min-width: 601px) {
-            // .card-wrapper-team {
-            //  margin:0px auto;
-            //  max-width: 60%;  
-            //       }
-            // }
+            @media only screen and (max-width: 601px) {
+            .card-wrapper-team {
+             margin:0px auto;
+             max-width: 60%;  
+                  }
+            }
                              
           
          

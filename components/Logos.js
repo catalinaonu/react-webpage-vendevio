@@ -16,6 +16,5 @@ const Logos = () => (
     </div>
 )
 
-
 export default Logos
 

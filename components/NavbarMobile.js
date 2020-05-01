@@ -33,73 +33,75 @@ const NavbarMobile = () => {
             </div>
 
             <Drawer
-                title=""
+                title="Ventures&Development"
                 placement="right"
                 closable={true}
                 onClose={onClose}
                 visible={visible}
+                style={{height: 480, weight: 240}}
+                headerStyle={{background: '#fafafa'}}
+                bodyStyle={{fontSize: '18px', background: '#fafafa'}}
             >
                 <div className="navigation">
-                    <p><Link href="/index">
-                        <a title="Home Page">Home </a>
-                    </Link></p>
-                    <p><Link href="/ventures">
-                        <a title="Ventures Page">Ventures</a>
-                    </Link></p>
-                    <p><Link href="/development">
-                        <a title="Development Page">Development</a>
-                    </Link></p>
-                    <p><Link href="/team">
-                        <a title="Team Page">Team</a>
-                    </Link></p>
-                    <p><Link href="/jobs">
-                        <a title="Jobs Page">Jobs</a>
-                    </Link></p>
+                    <p>
+                        <Link href="/index">
+                            <a title="Home Page">Home </a>
+                        </Link>
+                    </p>
+                    <p>
+                        <Link href="/ventures">
+                            <a title="Ventures Page">Ventures</a>
+                        </Link>
+                    </p>
+                    <p>
+                        <Link href="/development">
+                            <a title="Development Page">Development</a>
+                        </Link>
+                    </p>
+                    <p>
+                        <Link href="/team">
+                            <a title="Team Page">Team</a>
+                        </Link>
+                    </p>
+                    <p>
+                        <Link href="/jobs">
+                            <a title="Jobs Page">Jobs</a>
+                        </Link>
+                    </p>
 
                     <Divider/>
 
-                    <p><Link href="/data_protection">
-                        <a title="Data protection Page">Datenscutz</a>
-                    </Link></p>
-                    <p><Link href="/impressum">
-                        <a title="Inpressum Page">Impressum</a>
-                    </Link></p>
+                    <p>
+                        <Link href="/data_protection">
+                            <a title="Data protection Page">Datenschutz</a>
+                        </Link>
+                    </p>
+                    <p>
+                        <Link href="/impressum">
+                            <a title="Inpressum Page">Impressum</a>
+                        </Link>
+                    </p>
                 </div>
-
-
             </Drawer>
-
-
             <style jsx>{`
-             .navbar-container-mobile{
+                       
+            .navbar-container-mobile{
              display: flex;
              justify-content: space-between;
              padding-left: 20px;
              }
-                            
-             //color for links inside the drawer
-             .navigation 
+             
+             h2 
              a {
-             color: #8c8c8c;
-             } 
-
-              a:hover {
-              opacity: 0.6;
-              }
-              
-              //logo color
-              h2,
-              a {
-              color: #ffffff;
-              }
-              
-              //to appear only on mobile
-             @media only screen and (min-width: 601px) {
-             .navbar-container-mobile {
-             display: none;
-                             }
+                color: #ffffff;
              }
-
+                                      
+             //to appear only on mobile
+             @media only screen and (min-width: 601px) {
+              .navbar-container-mobile {
+                display: none;
+              }
+             }
             `}</style>
         </div>
     );

@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React from "react";
 
 //next
 import Link from 'next/link';
@@ -23,7 +23,7 @@ const NavbarDesktop = () => (
                     </li>
                 </Col>
 
-                <Col xs={{span: 10, offset: 1}} lg={{span: 10, offset: 2}}>
+                <Col xs={{span: 11, offset: 1}} lg={{span: 10, offset: 2}}>
                     <Row gutter={{xs: 8, sm: 16, md: 24, lg: 32}}>
                         {/*Link to Ventures Page*/}
                         <li>
@@ -67,33 +67,27 @@ const NavbarDesktop = () => (
 
         <style jsx>{`
         .navbar-container-desktop {
-         width:100%;
-         padding-top: 25px;
+            padding-top: 25px;
         }
         
         //remove the list bullets
         ul li{
-        list-style-type: none;
-         }
-        
-        
-        a:hover{
-        opacity: 0.6;
+            list-style-type: none;
         }
-        
+
         //text color
         .navbar-container-desktop
-        h2,
-        a{
-        color: #ffffff;
-        font-weight: 400;
+            h2,
+            a{
+              color: #fafafa;
+              font-weight: 400;
              }
         
         //to appear only on mobile
         @media only screen and (max-width: 600px){
-        .navbar-container-desktop{
-         display: none;
-              }
+            .navbar-container-desktop{
+                display: none;
+            }
         }
         
         `}</style>

@@ -65,22 +65,22 @@ const services = {
         "coding": {
             "img": <img src='/modernste_technologien.svg'/>,
             "title": "Coding it the right way",
-            "description": "Modernste Technologien"
+            // "description": "Modernste Technologien"
         },
         "team-and-remote": {
             "img": <img src='/team_und_remote.svg'/>,
             "title": "Team und Remote",
-            "description": "Love what you Do"
+            // "description": "Love what you Do"
         },
         "offene-unternehmeskultur": {
             "img": <img src='/unternehmenskultur.svg'/>,
             "title": "Offene Unternehmenskultur",
-            "description": "Never stop innovating"
+            // "description": "Never stop innovating"
         },
         "gründe-neue-ventures": {
             "img": <img src='/eigene_ventures.svg'/>,
             "title": "Gründe neue Ventures",
-            "description": "Never stop innovating"
+            // "description": "Never stop innovating"
         }
     }
 }

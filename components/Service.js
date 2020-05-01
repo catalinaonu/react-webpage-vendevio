@@ -1,5 +1,8 @@
+import React from "react";
+
 //antd
 import {Card} from 'antd';
+import {Row, Col} from 'antd';
 
 const {Meta} = Card;
 
@@ -15,7 +18,6 @@ const Service = ({service}) => (
                   description={service.description}
             />
         </Card>
-
     </div>
 )
 
