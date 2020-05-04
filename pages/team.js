@@ -136,25 +136,7 @@ function Team() {
                            ), url('/team_large.jpg'); 
                          }
              }
-             
-             //center the messages on the background img
-             .welcome-messages{
-              max-width: 50%;
-              margin-left: 25%;
-              margin-right: 25%;
-              height: 100vh;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              align-content: center;
-              justify-content: center;
-             }
-             
-             .welcome-message-team {
-              text-align: center;
-              padding-bottom: 24px;
-             }
-             
+                  
              //image box
              .card-wrapper-services-team {
                max-width: 100%;

@@ -52,21 +52,22 @@ const Development = () => {
                     </div>
 
                     {/*message header*/}
-                    <section className="welcome-messages-development">
-                        <div className="welcome-message-development">
-                            <WelcomeMessage welcomeMessage={welcomeMessage["development_page"]}/>
+                    <section className="welcome-messages">
+                        <div className="welcome-messages-development">
+                            <div className="welcome-message-development">
+                                <WelcomeMessage welcomeMessage={welcomeMessage["development_page"]}/>
+                            </div>
+
+                            {/*link to contact form*/}
+                            <div className="link-contact-form-development">
+                                <Link href="#contact-form-development">
+                                    <a title="Development Page"><Button ghost size="large">jetzt bewerben</Button></a>
+                                </Link>
+                            </div>
                         </div>
 
-
-                        {/*link to contact form*/}
-                        <div className="link-contact-form-development">
-                            <Link href="#contact-form-development">
-                                <a title="Development Page"><Button ghost size="large">jetzt bewerben</Button></a>
-                            </Link>
-                        </div>
                     </section>
                 </div>
-
             </header>
 
             {/*values/divider*/}
@@ -185,26 +186,27 @@ const Development = () => {
                            ), url('/development_large.jpg'); 
                          }
              }
-             
-             //center the messages on the background img
+
+                       
              .welcome-messages-development{
-              max-width: 50%;
-              margin-left: 25%;
-              margin-right: 25%;
-              height: 100vh;
               display: flex;
               flex-direction: column;
+              justify-content: center;
               align-items: center;
               align-content: center;
-              justify-content: center;
              }
-             
-             .welcome-message-development {
-              text-align: center;
-              padding-bottom: 24px;
+             @media only screen and (max-width: 600px) {
+              .welcome-messages-development{
+               height: 20vh;
+              }
              }
-             
-            
+             @media only screen and (min-width: 601px) {
+              .welcome-messages-development{
+               height: 80vh;
+              }
+             }
+               
+                       
             //style the vision list
              .card-wrapper-vision-development {
               max-width: 100%;

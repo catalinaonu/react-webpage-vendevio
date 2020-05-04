@@ -23,6 +23,9 @@ function Layout(props) {
              p {
                  color: #8c8c8c;
              }
+             h1 {
+                color: #8c8c8c;
+             }
                                              
              h3 {
                  color: #8c8c8c;

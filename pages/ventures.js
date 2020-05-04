@@ -5,32 +5,28 @@ import {Row, Col, Slider, Card} from 'antd';
 import {Carousel} from 'antd';
 import {Button} from 'antd';
 
-
 // next
 import Head from "next/head";
 import Link from "next/link";
 
 // components
 import Footer from "../components/Footer";
+import ServicesVentures from "../components/ServicesVentures";
 import Company from "../components/Company";
-import Service from "../components/Service";
-import Vision from "../components/Vision";
-
+import VisionVentures from "../components/VisionVentures";
 import Value from "../components/Value";
 import WelcomeMessage from "../components/WelcomeMessage";
 import TeamMemberForm from "../components/TeamMemberForm";
 import ContactFormVentures from "../components/ContactFormVentues";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
+import CarouselVentures from "../components/CarouselVentures";
 
 // files data
 import companies from "../components/Data/companies_info";
-import services from "../components/Data/services_info";
 import values from "../components/Data/values";
-import vision from "../components/Data/vision_list";
 import team from "../components/Data/team_info";
 import welcomeMessage from "../components/Data/welcome_info";
-import ContactFormDevelopment from "../components/ContactFormDevelopment";
 
 
 function Ventures() {
@@ -58,15 +54,18 @@ function Ventures() {
 
                     {/*message header*/}
                     <section className="welcome-messages">
-                        <div className="welcome-message-ventures">
-                            <WelcomeMessage welcomeMessage={welcomeMessage["ventures_page"]}/>
-                        </div>
 
-                        {/*link to contact form*/}
-                        <div className="link-contact-form">
-                            <Link href="#contact-form-ventures">
-                                <a title="Ventures Page"><Button ghost size="large">JETZT BEWERBEN</Button></a>
-                            </Link>
+                        <div className="welcome-messages-ventures">
+                            <div className="welcome-message-ventures">
+                                <WelcomeMessage welcomeMessage={welcomeMessage["ventures_page"]}/>
+                            </div>
+
+                            {/*link to contact form*/}
+                            <div className="link-contact-form">
+                                <Link href="#contact-form-ventures">
+                                    <a title="Ventures Page"><Button ghost size="large">JETZT BEWERBEN</Button></a>
+                                </Link>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -79,55 +78,17 @@ function Ventures() {
 
             {/*vision*/}
             <section className="vision-section">
-                <div className="card-wrapper-vision">
-                    <Row gutter={[16, 16]} justify="center">
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["ventures"]["startup-mindset"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["ventures"]["flexibles_beteiligungsmodell"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["ventures"]["gemeinsame_vision"]}/>
-                        </Col>
-                    </Row>
-                </div>
+                <VisionVentures/>
             </section>
-
 
             {/*services*/}
             <section className="services-section">
-                <div className="card-wrapper-services">
-                    <Row gutter={[16, 32]} justify="center">
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["ventures"]["code-exzellenz"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["ventures"]["netzwerk"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["ventures"]["teile-des-teams"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["ventures"]["startup-konditionen"]}/>
-                        </Col>
-                    </Row>
-                </div>
+                <ServicesVentures/>
             </section>
 
             {/*Customers*/}
             <section className="customers-section">
-                <div className="carousel-customers">
-                    <Carousel autoplay>
-                        <div><Company company={companies["Alveri"]}/></div>
-                        <div><Company company={companies["QuickSpeech"]}/></div>
-                        <div><Company company={companies["Vereinsplaner"]}/></div>
-
-                    </Carousel>
-                </div>
+                <CarouselVentures/>
             </section>
 
             {/*contact form*/}
@@ -175,77 +136,72 @@ function Ventures() {
                            ), url('/ventures_large.jpg'); 
                          }
              }
-             
+                                  
              //center the messages on the background img
-             .welcome-messages{
-              max-width: 50%;
-              margin-left: 25%;
-              margin-right: 25%;
-              height: 100vh;
+             .welcome-messages-ventures{
               display: flex;
               flex-direction: column;
+              justify-content: center;
               align-items: center;
               align-content: center;
-              justify-content: center;
              }
-             
-             .welcome-message-ventures {
-              text-align: center;
-              padding-bottom: 24px;
-             }
-             
-             //style the vision list
-             .card-wrapper-vision {
-              max-width: 100%;
-              margin: 0px auto;
-              padding: 24px;
-              background: #002766;
-             }
-             
-             //center the vision list for desktop
-             @media only screen and (min-width: 601px) {
-              .card-wrapper-vision {
-                max-width: 60%;        
-                  }
-              }              
-          
-              .card-wrapper-services {
-               max-width: 100%;
-               margin: 24px auto;
-               max-width: 80%;             
+             @media only screen and (max-width: 600px) {
+              .welcome-messages-ventures{
+               height: 20vh;
               }
-              
-               @media only screen and (min-width: 601px) {
-                .card-wrapper-services {
-                margin: 48px auto;
-               }
-               }
-                             
-            .carousel-customers {  
-                                text-align: center;
-                                height: 240px;
-                                background: #364d79;
-                                overflow: hidden;
-                                max-width: 100%;
-                                margin: 48px auto;
-                                padding-bottom: 24px;
-                                }
-                                
-            @media only screen and (min-width: 601px) {
-             .carousel-customers {
-              max-width: 60%;
-              margin: 24px auto;
-                 }
-             }                   
-       
-            .carousel-customers 
-             div {
-               margin-left: 24px;
              }
-                                
+             @media only screen and (min-width: 601px) {
+              .welcome-messages-ventures{
+               height: 80vh;
+              }
+             }
+             //style the vision list
+            .vision-section{
+             margin: 48px auto;
+             background: #002766;
+            }
+            @media only screen and (min-width: 601px) {
+             .vision-section{
+              max-width: 60%;
+             }
+            }
+            .services-section {
+             max-width: 80%; 
+             margin: 48px auto;  
+            } 
             .customers-section {
-              background: #364d79;
-            }                    
+             background: #002766;
+             margin: 0px auto;
+            }    
+         
+            //
+            //
+            //
+            // .carousel-customers {  
+            //                     text-align: center;
+            //                     height: 400px;
+            //                     background: #364d79;
+            //                     overflow: hidden;
+            //                     max-width: 100%;
+            //                     margin: 48px auto;
+            //                     padding-bottom: 24px;
+            //                     }
+            //
+            // @media only screen and (min-width: 601px) {
+            //  .carousel-customers {
+            //   max-width: 60%;
+            //   margin: 24px auto;
+            //      }
+            //  }                   
+            //
+            // .carousel-customers 
+            //  div {
+            //    margin-left: 24px;
+            //  }
+            //
+            // .customers-section {
+            //   background: #364d79;
+            // }                    
                 
             // center the contact form                    
             #contact-form-ventures{
