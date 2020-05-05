@@ -1,41 +1,44 @@
-import TeamMemberForm from "./TeamMemberForm";
-import team from "./Data/team_info";
-import ContactFormVentures from "./ContactFormVentues";
 import React from "react";
+//components
+import TeamMemberForm from "./TeamMemberForm";
+import ContactFormDevelopment from "./ContactFormDevelopment";
+//data files
+import team from "./Data/team_info";
 
-const ContactVentures = () => (
-    <div className="contact-form-ventures">
-        <div className="team-member-ventures">
-            <TeamMemberForm teamMember={team["Kambis"]}/>
+
+const ContactDevelopment = () => (
+    <div className="contact-form-development">
+        <div className="team-member-development">
+            <TeamMemberForm teamMember={team["Stefan"]}/>
         </div>
-        <div className="contact-form-ventures">
-            <ContactFormVentures/>
+        <div className="contact-form-development">
+            <ContactFormDevelopment/>
         </div>
         <style jsx>{`
-         .contact-form-ventures{
+         .contact-form-development{
+          max-width: 100%;  
           margin: 48px auto;
           display: flex;
-          max-width: 100%;   
-         }
+         } 
           //Prevent flexbox shrinking
-         .contact-form-ventures{
+         .contact-form-development {
           flex: 1;
          }
-         .team-member-ventures {
+         .team-member-development {
           flex: 1;
          }
          @media only screen and (max-width: 600px) {
-          .contact-form-ventures {
+          .contact-form-development {
            flex-direction: column;
            flex-flow: flex-direction; 
            justify-content: center;
            align-items: center;
            align-content: center;
-           margin: 0 24px;
+           margin: 24px auto;
           }
          }
          @media only screen and (min-width: 601px) { 
-          .contact-form-ventures {
+          .contact-form-development {
            flex-direction: row;
            max-width: 50%;
            margin: 48px auto;
@@ -44,8 +47,9 @@ const ContactVentures = () => (
            align-items: center;
           }
          }
-       `}</style>
+                
+        `}</style>
     </div>
 )
 
-export default ContactVentures
+export default ContactDevelopment

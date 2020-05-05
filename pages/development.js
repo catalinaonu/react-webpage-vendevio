@@ -1,5 +1,9 @@
 import React from "react";
 
+//next
+import Head from "next/head";
+import Link from "next/link";
+
 //antd
 import {Button, Card, Col, Row} from 'antd';
 import {Carousel} from 'antd';
@@ -8,24 +12,17 @@ import {Carousel} from 'antd';
 import Footer from "../components/Footer";
 import WelcomeMessage from "../components/WelcomeMessage";
 import Value from "../components/Value";
-import Vision from "../components/Vision";
-import Company from "../components/Company";
-import Service from "../components/Service";
-import TeamMemberForm from "../components/TeamMemberForm";
-import ContactFormDevelopment from "../components/ContactFormDevelopment";
+import CarouselDevelopment from "../components/CarouselDevelopment";
+import ContactDevelopment from "../components/ContactDevelopment";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
+import VisionDevelopment from "../components/VisionDevelopment";
+import ServicesDevelopment from "../components/ServicesDevelopment";
+import CarouselDevelopmentMobile from "../components/CarouselDevelopmentMobile";
 
 //files data
 import welcomeMessage from "../components/Data/welcome_info";
 import values from "../components/Data/values";
-import vision from "../components/Data/vision_list";
-import companies from "../components/Data/companies_info";
-import services from "../components/Data/services_info";
-import team from "../components/Data/team_info";
-import Head from "next/head";
-import VisionList from "../components/VisionList";
-import Link from "next/link";
 
 
 const Development = () => {
@@ -75,46 +72,14 @@ const Development = () => {
                 <Value value={values["development"]["projectmanagement"]}/>
             </section>
 
-
             {/*vision_list*/}
-
-            <section className="vision-section-development">
-                <div className="card-wrapper-vision-development">
-                    <Row gutter={[16, 16]} justify="center">
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["development"]["projektmanagement"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["development"]["innovative_denkansätze"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["development"]["software_entwicklung"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 0}}>
-                            <Vision visionMessage={vision["development"]["zeitgemäße_technologien"]}/>
-                        </Col>
-                    </Row>
-                </div>
+            <section className="vision-section">
+                <VisionDevelopment/>
             </section>
 
             {/*ServicesList with image and description*/}
-            <section className="services-section-development">
-                <div className="card-wrapper-services-development">
-                    <Row gutter={[16, 32]} justify="center">
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["development"]["technische-konzeption"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["development"]["technische_implementierung"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["development"]["qualitätssicherung"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 5, offset: 1}}>
-                            <Service service={services["development"]["kundensupport"]}/>
-                        </Col>
-                    </Row>
-                </div>
+            <section className="services-section">
+                <ServicesDevelopment/>
             </section>
 
             {/*values/divider*/}
@@ -124,33 +89,14 @@ const Development = () => {
 
 
             {/*customers*/}
-            <section className="customers-section-development">
-                <div className="carousel-customers-development">
-                    <Carousel autoplay>
-                        <div><Company company={companies["Freebiebox"]}/></div>
-                        <div><Company company={companies["Delta"]}/></div>
-                        <div><Company company={companies["Seekyou"]}/></div>
-                        <div><Company company={companies["LeadStudy"]}/></div>
-                        <div><Company company={companies["PrimeCrowd"]}/></div>
-                        <div><Company company={companies["Carployee"]}/></div>
-                    </Carousel>
-                </div>
+            <section className="customers-section">
+              <CarouselDevelopment/>
+              <CarouselDevelopmentMobile/>
             </section>
 
-
             {/*form contact*/}
-            <section className="contact-form-section-develipment">
-                <div id="contact-form-development">
-                    <div className="team-member-development">
-                        <TeamMemberForm teamMember={team["Stefan"]}/>
-                    </div>
-                    <div className="contact-form-development">
-                        {/*<Card style={{width: 500}}>*/}
-                        <ContactFormDevelopment/>
-                        {/*</Card>*/}
-
-                    </div>
-                </div>
+            <section className="contact-form-section-development" id="contact-form-development">
+            <ContactDevelopment/>
             </section>
 
             <Footer/>
@@ -205,107 +151,24 @@ const Development = () => {
                height: 80vh;
               }
              }
-               
-                       
-            //style the vision list
-             .card-wrapper-vision-development {
-              max-width: 100%;
-              margin: 24px auto;
-              padding: 24px;
+              //style the vision list
+             .vision-section{
               background: #002766;
+              max-width: 100%;
+              margin: 0px auto;
              }
-             
-             //center the vision list for desktop
              @media only screen and (min-width: 601px) {
-              .card-wrapper-vision-development {
-                max-width: 60%;        
-                  }
-              }              
-          
-              .card-wrapper-services-development {
-               max-width: 100%;
-               margin-left: 20%;
-               margin:right: 20%;
-                       
+              .vision-section{
+               max-width: 80%;
               }
-              
-               @media only screen and (min-width: 601px) {
-                .card-wrapper-services-development {
-                 margin: 48px auto;
-                 max-width: 80%; 
-                  }
-               }
-                             
-            .carousel-customers-development {  
-                                text-align: center;
-                                height: 240px;
-                                background: #364d79;
-                                overflow: hidden;
-                                max-width: 100%;
-                                margin: 48px auto;
-                                padding-bottom: 24px;
-                                }
-                                
-            @media only screen and (min-width: 601px) {
-             .carousel-customers-development {
-              max-width: 60%;
-              margin: 24px auto;
-                 }
-             }                   
-       
-            .carousel-customers-development 
-             div {
-               margin-left: 24px;
-             }
-                                
-            .customers-section-development {
+             }   
+              //carousel customers         
+             .customers-section {
               background: #364d79;
             }                    
                 
-            // center the contact form                    
-            #contact-form-development{
-             display: flex;
-             max-width: 100%;   
-             }
-                      
-            //Prevent flexbox shrinking
-            .contact-form-development {
-             flex: 1;
-             }
-             
-             .team-member-development {
-             flex: 1;
-             }
-
-            @media only screen and (max-width: 600px) {
-             #contact-form-development {
-             flex-direction: column;
-             flex-flow: flex-direction; 
-             justify-content: center;
-             align-items: center;
-             align-content: center;
-             margin:0 24px;
-               }
-            .contact-form-development {
-             padding-top: 24px; 
-             margin: 24px auto;
-             }
+                          
             
-             }
-             
-             @media only screen and (min-width: 601px) { 
-              #contact-form-development{
-              flex-direction: row;
-              max-width: 50%;
-              margin: 48px auto;
-              flex-flow: flex-direction; 
-              justify-content: space-between;
-              align-items: center;
-               }
-             }
-            
-                    
-                    
             `}</style>
         </div>
     )

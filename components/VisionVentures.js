@@ -10,7 +10,7 @@ import vision from "./Data/vision_list";
 import {Row, Col} from 'antd'
 
 const VisionVentures = () => (
-    <div className="card-wrapper-vision">
+    <div className="card-wrapper-vision-ventures">
         <Row gutter={[16, 16]} justify="center">
             <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                 <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
@@ -26,7 +26,7 @@ const VisionVentures = () => (
             </Col>
         </Row>
         <style jsx>{`
-         .card-wrapper-vision {
+         .card-wrapper-vision-ventures {
           max-width: 100%;
           padding: 48px;
           margin: 0px auto;

@@ -1,35 +1,34 @@
+import React from "react";
+//antd
+import {Col, Row} from "antd";
 //components
 import Service from "./Service";
-
-//files
+//data files
 import services from "./Data/services_info";
 
-//antd
-import { Row, Col} from "antd";
-
-const ServicesVentures = () => (
-    <div className="card-wrapper-services-ventures">
+const ServicesDevelopment = () => (
+    <div className="card-wrapper-services-development">
         <Row gutter={[16, 32]} justify="center">
             <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
-                <Service service={services["ventures"]["code-exzellenz"]}/>
+                <Service service={services["development"]["technische-konzeption"]}/>
             </Col>
             <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
-                <Service service={services["ventures"]["netzwerk"]}/>
+                <Service service={services["development"]["technische_implementierung"]}/>
             </Col>
             <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
-                <Service service={services["ventures"]["teile-des-teams"]}/>
+                <Service service={services["development"]["qualitätssicherung"]}/>
             </Col>
             <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
-                <Service service={services["ventures"]["startup-konditionen"]}/>
+                <Service service={services["development"]["kundensupport"]}/>
             </Col>
         </Row>
         <style jsx>{`
-         .card-wrapper-services-ventures {
+         .card-wrapper-services-development {
           max-width: 100%;
           margin: 48px auto;   
          }
          @media only screen and (min-width: 601px) {
-          .card-wrapper-services-ventures {
+          .card-wrapper-services-development {
            max-width: 80%;
           } 
          }
@@ -37,5 +36,4 @@ const ServicesVentures = () => (
     </div>
 )
 
-export default ServicesVentures
-
+export default ServicesDevelopment

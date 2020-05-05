@@ -154,6 +154,7 @@ function Ventures() {
               max-width: 80%;
              }
             }
+             // carousel customers
             .customers-section {
              background:  #364d79;
             }    
