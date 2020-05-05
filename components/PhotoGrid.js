@@ -12,9 +12,7 @@ const style = {
     width: 200,
     textAlign: 'left',
     borderRadius: '3%'
-
     }
-
 
 const PhotoGrid = ({teamMember}) => {
     return (
@@ -139,7 +137,11 @@ const PhotoGrid = ({teamMember}) => {
             </Row>
 
             <style jsx>{`
-           
+              @media only screen and (max-width: 601px) {  
+               .card-grid-wrapper{
+                display: none;
+               }
+              }  
             `}</style>
         </div>
     )

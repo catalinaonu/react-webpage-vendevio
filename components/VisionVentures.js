@@ -29,6 +29,7 @@ const VisionVentures = () => (
          .card-wrapper-vision {
           max-width: 100%;
           padding: 48px;
+          margin: 0px auto;
          }
        `}</style>
     </div>

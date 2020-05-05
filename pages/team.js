@@ -5,21 +5,18 @@ import Head from "next/head";
 
 //components
 import Footer from "../components/Footer";
-import Service from "../components/Service";
-import TeamList from "../components/TeamList";
+import ServicesTeam from "../components/ServicesTeam";
+import WelcomeMessage from "../components/WelcomeMessage";
 import Value from "../components/Value";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
 import PhotoGrid from "../components/PhotoGrid";
+import ManagementTeam from "../components/ManagementTeam"
 
 //files with data
-import services from "../components/Data/services_info";
 import values from "../components/Data/values";
-import WelcomeMessage from "../components/WelcomeMessage";
 import welcomeMessage from "../components/Data/welcome_info";
-import {Col, Row} from "antd";
-import TeamMemberForm from "../components/TeamMemberForm";
-import team from "../components/Data/team_info";
+
 
 function Team() {
     return (
@@ -59,20 +56,8 @@ function Team() {
             </section>
 
             {/* services with photo and description*/}
-            <section className="services-section-team">
-                <div className="card-wrapper-services-team">
-                    <Row gutter={[16, 32]} justify="center">
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 2}}>
-                            <Service service={services["team"]["coding_it_the_right_way"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 2}}>
-                            <Service service={services["team"]["love_what_you_do"]}/>
-                        </Col>
-                        <Col xs={{span: 20, offset: 1}} lg={{span: 6, offset: 2}}>
-                            <Service service={services["team"]["never_stop_innovating"]}/>
-                        </Col>
-                    </Row>
-                </div>
+            <section className="services-section">
+                <ServicesTeam/>
             </section>
 
             {/*values/divider*/}
@@ -82,30 +67,12 @@ function Team() {
 
             {/*Photos of the entire team*/}
             <section className="team-section">
-                <div className="team">
-                    <div className="card-wrapper-managers">
-                        <Row gutter={[16, 32]} justify="center">
-                            <Col xs={{span: 20, offset: 1}} lg={{span: 8, offset: 0}}>
-                                <TeamMemberForm teamMember={team["Stefan"]}/>
-                            </Col>
-                            <Col xs={{span: 20, offset: 1}} lg={{span: 8, offset: 0}}>
-                                <TeamMemberForm teamMember={team["Hannes"]}/>
-                            </Col>
-                            <Col xs={{span: 20, offset: 1}} lg={{span: 8, offset: 0}}>
-                                <TeamMemberForm teamMember={team["Kambis"]}/>
-                            </Col>
-                        </Row>
-                    </div>
-                    <div className="rest-of-the-team">
-                        <PhotoGrid/>
-                    </div>
-                </div>
+                <ManagementTeam/>
+                <PhotoGrid/>
             </section>
 
-
             <Footer/>
-
-            <style jsx>{`
+          <style jsx>{`
            .header-img {
              display: flex;
              flex-direction: column;
@@ -136,46 +103,7 @@ function Team() {
                            ), url('/team_large.jpg'); 
                          }
              }
-                  
-             //image box
-             .card-wrapper-services-team {
-               max-width: 100%;
-               margin-right: 20%;
-               margin-left: 20%;
-               
-              }
-              
-             @media only screen and (min-width: 601px) {
-              .card-wrapper-services-team {
-                margin:0px auto;
-                max-width: 60%;  
-                  }
-             }
-               
-            .team{
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             align-items: center;
-             align-content: center;
-             max-width: 100%;
-             margin: 0px auto;   
-            
-             }
-            
-                       
-            @media only screen and (max-width: 601px) {
-            .card-wrapper-team {
-             margin:0px auto;
-             max-width: 60%;  
-                  }
-            }
-                             
-          
-         
-            `}
-
-            </style>
+          `}</style>
         </div>
     )
 }

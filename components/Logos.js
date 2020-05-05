@@ -11,7 +11,7 @@ const Logos = () => (
         <Row justify="center" align="middle" gutter={[32, 32]}>
             {keys.map(key => (
                 <Col key={key} xs={{span: 9, offset: 2}} lg={{span: 4, offset: 1}}>
-                    {companies[key].img}
+                    {companies[key].logo}
                 </Col>
             ))}
         </Row>

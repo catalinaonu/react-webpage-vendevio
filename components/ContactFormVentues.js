@@ -5,7 +5,6 @@ import {Input} from 'antd';
 import {Upload, message, Button} from 'antd';
 import {UploadOutlined} from '@ant-design/icons';
 
-
 //components
 import Form from "./Form";
 import InputField from "./InputField";
@@ -72,7 +71,10 @@ const ContactFormVentures = ({onSubmit}) => {
 
             </Form>
             <style jsx>{`
-                    
+            .contact-form-ventures {
+             margin: 24px auto;
+            }
+              
             .button-contact-form-ventures{
             padding-top: 24px;
             }
