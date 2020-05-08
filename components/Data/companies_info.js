@@ -4,13 +4,13 @@ const companies = {
         "logo": <img src='/alveri.png'/>,
         "img": <img src='alveri_carousel.png'/>,
         "description": "Alveri digitalisiert den traditionellen Handel von Autos mit alternativer Energie und passt das Nutzererlebnis an individuelle Bedürfnisse an."
-},
+    },
     "Freebiebox": {
-            "id": "Freebiebox",
-            "logo": <img src='/freebiebox.png'/>,
-            "img": <img src='/freebiebox_carousel.png'/>,
-            "description": "Freebiebox ist die individuelle Überraschungsbox mit Werbeprodukten, initiiert von Österreichs jüngsten Gründer Moritz Lechner."
-        },
+        "id": "Freebiebox",
+        "logo": <img src='/freebiebox.png'/>,
+        "img": <img src='/freebiebox_carousel.png'/>,
+        "description": "Freebiebox ist die individuelle Überraschungsbox mit Werbeprodukten, initiiert von Österreichs jüngsten Gründer Moritz Lechner."
+    },
     "Seekyou": {
         "id": "SeekYou",
         "logo": <img src='/seekyou.svg'/>,
@@ -21,9 +21,7 @@ const companies = {
         "id": "Vereinsplaner",
         "logo": <img src='/vereinsplaner.png'/>,
         "img": <img src='/vereinsplaner_carousel.png'/>
-
     },
-
     "PrimeCrowd": {
         "id": "PrimeCrowd",
         "logo": <img src='/primecrowd.png'/>,
@@ -48,21 +46,19 @@ const companies = {
         "img": <img src='leadstudy_carousel.png'/>,
         "description": "LEAD steht für Lung, hEart, sociAl, boDy und ist die weltweit größte COPD Studie, initiiert durch die Ludwig Boltzmann Gesellschaft."
     },
-    "Delta" : {
+    "Delta": {
         "id": "DELTA",
         "logo": <img src='/delta.png'/>,
         "img": <img src='/delta_carousel.png'/>,
         "description": "DELTA zählt zu den etabliertesten Gesamtdienstleistern für Immobilien, darunter die WU Wien, Tabakfabrik Linz und voestalpine."
     },
-    "QuickSpeech" : {
+    "QuickSpeech": {
         "id": "QueekSpeack",
         "logo": <img src='/quickspeech.png'/>,
         "img": <img src='/quickspeech_carousel.png'/>,
         "description": "QuickSpeech ist die mobile Lern-Index für Mitarbeiter und entwickelt für jeden Nutzer einen maßgeschneiderten, optimierten Lernweg."
-
     }
 }
-
 
 export default companies
 

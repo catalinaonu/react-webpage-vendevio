@@ -11,8 +11,7 @@ import Head from "next/head";
 // components
 import Footer from "../components/Footer";
 import Value from "../components/Value";
-import Service from "../components/Service";
-import TeamMemberJobsPage from "../components/TeamMemberJobsPage";
+import ServicesJob from "../components/ServicesJob";
 import ListOfJobs from "../components/ListOfJobs";
 import NavbarDesktop from "../components/NavbarDesktop";
 import NavbarMobile from "../components/NavbarMobile";
@@ -20,8 +19,7 @@ import NavbarMobile from "../components/NavbarMobile";
 
 // files with data
 import values from "../components/Data/values";
-import services from "../components/Data/services_info";
-import team from "../components/Data/team_info"
+
 
 
 function Jobs() {
@@ -65,22 +63,7 @@ function Jobs() {
 
             {/*services*/}
             <section className="services-section">
-                <div className="card-wrapper-services-jobs">
-                    <Row>
-                        <Col>
-                            <Service service={services["jobs"]["coding"]}/>
-                        </Col>
-                        <Col>
-                            <Service service={services["jobs"]["team-and-remote"]}/>
-                        </Col>
-                        <Col>
-                            <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
-                        </Col>
-                        <Col>
-                            <Service service={services["jobs"]["gründe-neue-ventures"]}/>
-                        </Col>
-                    </Row>
-                </div>
+                <ServicesJob/>
             </section>
 
             {/* values/divider*/}
