@@ -158,7 +158,7 @@ function Ventures() {
             .customers-section {
              background:  #364d79;
             }    
-         
+        
             `}</style>
         </div>
     );

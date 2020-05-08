@@ -8,12 +8,13 @@ const companies = {
     "Freebiebox": {
             "id": "Freebiebox",
             "logo": <img src='/freebiebox.png'/>,
-
+            "img": <img src='/freebiebox_carousel.png'/>,
             "description": "Freebiebox ist die individuelle Überraschungsbox mit Werbeprodukten, initiiert von Österreichs jüngsten Gründer Moritz Lechner."
         },
     "Seekyou": {
         "id": "SeekYou",
-       "logo": <img src='/seekyou.svg'/>,
+        "logo": <img src='/seekyou.svg'/>,
+        "img": <img src='seekyou_carousel.svg'/>,
         "description": "SEEKYOU berät multinationale Konzerne, öffentliche Einrichtungen und Start-ups in den Bereichen Digitalisierung sowie Innovation."
     },
     "Vereinsplaner": {
@@ -26,26 +27,31 @@ const companies = {
     "PrimeCrowd": {
         "id": "PrimeCrowd",
         "logo": <img src='/primecrowd.png'/>,
+        "img": <img src='/primecrowd_carousel.png'/>,
         "description": "primeCROWD vernetzt wachstumsstarke Startups mit Investoren und ist eines der größten Startup-Investoren-Netzwerke Österreichs."
     },
     "Blockpit": {
         "id": "blockPit",
         "logo": <img src='/blockpit.svg'/>,
+        "img": <img src='/blockpit_carousel.svg'/>,
         "description": "Blockpiimt ermöglicht Steuerreports sowie Portfolio Management für Kryptowährungen und bildet die Schnittstelle für alle Beteiligten."
     },
     "Carployee": {
         "id": "Carployee",
         "logo": <img src='/carployee.png'/>,
+        "img": <img src='carployee_carousel.png'/>,
         "description": "Carployee ist die intelligente Mitfahr-Index für den täglichen Arbeitsweg zu Unternehmen und Businessparks."
     },
     "LeadStudy": {
         "id": "LeadStudy",
         "logo": <img src='/lead_study.png'/>,
+        "img": <img src='leadstudy_carousel.png'/>,
         "description": "LEAD steht für Lung, hEart, sociAl, boDy und ist die weltweit größte COPD Studie, initiiert durch die Ludwig Boltzmann Gesellschaft."
     },
     "Delta" : {
         "id": "DELTA",
         "logo": <img src='/delta.png'/>,
+        "img": <img src='/delta_carousel.png'/>,
         "description": "DELTA zählt zu den etabliertesten Gesamtdienstleistern für Immobilien, darunter die WU Wien, Tabakfabrik Linz und voestalpine."
     },
     "QuickSpeech" : {

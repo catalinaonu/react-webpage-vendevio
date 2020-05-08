@@ -102,7 +102,7 @@ const Development = () => {
             <Footer/>
 
             <style jsx>{`
-        .header-img {
+            .header-img {
              display: flex;
              flex-direction: column;
              flex-flow: flex-direction;
@@ -166,9 +166,7 @@ const Development = () => {
              .customers-section {
               background: #364d79;
             }                    
-                
-                          
-            
+                    
             `}</style>
         </div>
     )
