@@ -5,7 +5,8 @@ const welcomeMessage = {
             },
     "development_homepage": {
        "title": "Development",
-        "description": "Projectmanagement & Softwareentwicklung"
+        "description": "Projectmanagement&" +
+            "Softwareentwicklung"
 
     },
     "ventures_page": {

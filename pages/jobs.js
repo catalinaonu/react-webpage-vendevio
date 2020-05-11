@@ -1,25 +1,20 @@
 import React from "react";
 
-//antd
-import {Button} from 'antd';
-import {Divider} from "antd";
-
 //next
-import Link from "next/link";
 import Head from "next/head";
+
+//antd
+import {Divider} from "antd";
 
 // components
 import Footer from "../components/Footer";
 import Value from "../components/Value";
 import ServicesJob from "../components/ServicesJob";
 import ListOfJobs from "../components/ListOfJobs";
-import NavbarDesktop from "../components/NavbarDesktop";
-import NavbarMobile from "../components/NavbarMobile";
-
+import HeaderJobs from "../components/HeaderJobs";
 
 // files with data
 import values from "../components/Data/values";
-
 
 function Jobs() {
     return (
@@ -30,30 +25,8 @@ function Jobs() {
             </Head>
 
             <header id="jobs-header">
-                <div className="header-img">
-
-                    <div className="navbar-container">
-                        {/*navbar desktop*/}
-                        <div className="top-navbar">
-                            <NavbarDesktop/>
-                        </div>
-
-                        {/*navbar mobile*/}
-                        <div className="drawer-navbar">
-                            <NavbarMobile/>
-                        </div>
-                    </div>
-
-                    {/*link to the list of jobs*/}
-
-                    <Link href="#list-of-jobs">
-                        <div className="jobs-link">
-                            <a title="Jobs Page"> <Button ghost size="large">AKTUELLE STELLEN</Button></a>
-                        </div>
-                    </Link>
-                </div>
+                <HeaderJobs/>
             </header>
-
 
             {/* values/divider*/}
             <section className="values-section">
@@ -80,12 +53,10 @@ function Jobs() {
                 <Divider/>
             </section>
 
-
             {/*values/divider*/}
             <section className="values-section">
                 <Value value={values["job"]["meet-us"]}/>
             </section>
-
 
             {/*map image*/}
             <section className="vendevio-map">
@@ -99,82 +70,26 @@ function Jobs() {
 
             <Footer/>
             <style jsx>{`
-            .header-img {
-             display: flex;
-             flex-direction: column;
-             flex-flow: flex-direction;
+            .jobs-section{
+              background: #002766;
+            }
+            .vendevio-map {
              max-width: 100%;
-             height: 100vh;
-             //center the background img
-             background-position: center center;
-             background-repeat: no-repeat;
-             background-size: cover;
-             }
-            
+             margin: 48px auto;
+             display: flex;
+             justify-content: center;
+            }  
             @media only screen and (max-width: 600px) {
-            .header-img{
-             background:  linear-gradient(
-                           rgba(0, 0, 0, 0.4),
-                           rgba(0, 0, 0, 0.4)
-                           ), url('/jobs_small.jpg'); 
-             height: 30vh;
-                        }
+             .map-desktop{
+              display: none;
              }
-            
-             @media only screen and (min-width: 601px) {
-             .header-img{
-              background:  linear-gradient(
-                           rgba(0, 0, 0, 0.4),
-                           rgba(0, 0, 0, 0.4)
-                           ), url('/jobs_large.jpg'); 
-                         }
+            } 
+            @media only screen and (min-width: 601px) {
+             .map-mobile{
+              display: none;
              }
-             
-             //center the link button of the header
-             .jobs-link {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-end;
-              align-items: flex-end;
-              align-content: flex-end;
-              height: 100vh;
-             }
-             
-             @media only screen and (max-width: 600px) {
-             .jobs-link {
-              padding-bottom: 24px;
-              padding-right: 24px;
-              }
-             }
-             
-              @media only screen and (min-width: 601px) {
-             .jobs-link {
-              padding-bottom: 100px;
-              padding-right: 100px;
-                }
-              } 
-                
-              .jobs-section{
-               background: #002766;
-              }
-              .vendevio-map {
-               max-width: 100%;
-               margin: 48px auto;
-               display: flex;
-               justify-content: center;
-              }  
-              @media only screen and (max-width: 600px) {
-              .map-desktop{
-               display: none;
-               }
-              } 
-              @media only screen and (min-width: 601px) {
-              .map-mobile{
-               display: none;
-               }
-              } 
-            `}</style>
-
+            } 
+           `}</style>
         </div>
     )
 }
