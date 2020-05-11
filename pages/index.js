@@ -20,7 +20,7 @@ function Home() {
                 <HeaderHomepage/>
             </header>
 
-            {/*Logo of the customers*/}            }
+            {/*Logo of the customers*/}
             <section className="customers">
                 <Logos/>
             </section>

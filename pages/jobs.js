@@ -72,6 +72,7 @@ function Jobs() {
             <style jsx>{`
             .jobs-section{
               background: #002766;
+              
             }
             .vendevio-map {
              max-width: 100%;

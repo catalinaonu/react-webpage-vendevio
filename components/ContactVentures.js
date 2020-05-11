@@ -23,6 +23,7 @@ const ContactVentures = () => (
          }
          .team-member-ventures {
           flex: 1;
+          margin: 48px auto;
          }
          @media only screen and (max-width: 600px) {
           .contact-form-ventures {

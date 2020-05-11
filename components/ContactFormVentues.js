@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 //antd
-import {Input} from 'antd';
 import {Upload, message, Button} from 'antd';
 import {UploadOutlined} from '@ant-design/icons';
 
@@ -28,7 +27,6 @@ const props = {
         }
     },
 };
-
 
 const ContactFormVentures = ({onSubmit}) => {
     const [company, setCompany] = useState('');
@@ -80,10 +78,8 @@ const ContactFormVentures = ({onSubmit}) => {
         `}</style>
 
         </div>
-
     )
 }
-
 
 export default ContactFormVentures
 

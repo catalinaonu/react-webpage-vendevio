@@ -26,6 +26,7 @@ const ContactDevelopment = () => (
          }
          .team-member-development {
           flex: 1;
+          margin: 48px auto;
          }
          @media only screen and (max-width: 600px) {
           .contact-form-development {
@@ -47,8 +48,7 @@ const ContactDevelopment = () => (
            align-items: center;
           }
          }
-                
-        `}</style>
+       `}</style>
     </div>
 )
 
