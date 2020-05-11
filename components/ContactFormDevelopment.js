@@ -11,7 +11,7 @@ const ContactFormDevelopment = ({onSubmit}) => {
     const [text, setText] = useState('')
 
     return (
-        <div>
+        <div className="contact-form-development">
             <Form
                 onSubmit={event => {
                     onSubmit(company, email, text, phone);

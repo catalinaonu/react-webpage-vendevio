@@ -2,10 +2,11 @@ import {useRouter} from 'next/router';
 
 //components
 import OpenPosition from "../../components/OpenPosition";
-import JobApplyModal from "../../components/JobApplyModal";
+import JobApplication from "../../components/JobApplyForm";
 
 //file date
 import openJobs from "../../components/Data/open_positions";
+
 
 
 const JobDescription = () => {
@@ -17,7 +18,7 @@ const JobDescription = () => {
     return (
         <div>
             <OpenPosition job={openJobs[position]}/>
-            <JobApplyModal/>
+
        </div>
     );
 }

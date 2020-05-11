@@ -2,7 +2,7 @@ import React from "react";
 
 //antd
 import {Button} from 'antd';
-import {Col, Row} from "antd";
+import {Divider} from "antd";
 
 //next
 import Link from "next/link";
@@ -19,7 +19,6 @@ import NavbarMobile from "../components/NavbarMobile";
 
 // files with data
 import values from "../components/Data/values";
-
 
 
 function Jobs() {
@@ -71,11 +70,14 @@ function Jobs() {
                 <Value value={values["job"]["join-vendevio"]}/>
             </section>
 
+
             {/*List of jobs*/}
-            <section className="jobs-section">
-                <div id="list-of-jobs">
-                    <ListOfJobs/>
-                </div>
+            <section className="jobs-section" id="list-of-jobs">
+                <Divider plain style={{fontSize: 32, color: '#FFFFFF'}}>
+                    AKTUELLE STELLEN
+                </Divider>
+                <ListOfJobs/>
+                <Divider/>
             </section>
 
 
@@ -84,8 +86,16 @@ function Jobs() {
                 <Value value={values["job"]["meet-us"]}/>
             </section>
 
+
             {/*map image*/}
-            <img src="/map.jpg"/>
+            <section className="vendevio-map">
+                <div className="map-desktop">
+                    <img src="/map.jpg"/>
+                </div>
+                <div className="map-mobile">
+                    <img src="/map_mobile.jpg"/>
+                </div>
+            </section>
 
             <Footer/>
             <style jsx>{`
@@ -122,19 +132,19 @@ function Jobs() {
              
              //center the link button of the header
              .jobs-link {
-             display: flex;
-             flex-direction: row;
-             justify-content: flex-end;
-             align-items: flex-end;
-             align-content: flex-end;
-             height: 100vh;
-            }
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-end;
+              align-items: flex-end;
+              align-content: flex-end;
+              height: 100vh;
+             }
              
              @media only screen and (max-width: 600px) {
              .jobs-link {
-             padding-bottom: 24px;
-             padding-right: 24px;
-               }
+              padding-bottom: 24px;
+              padding-right: 24px;
+              }
              }
              
               @media only screen and (min-width: 601px) {
@@ -142,11 +152,27 @@ function Jobs() {
               padding-bottom: 100px;
               padding-right: 100px;
                 }
-              }       
-              
-              .card-wrapper-services-jobs :global(.card-wrapper-services-jobs){
-              }      
- 
+              } 
+                
+              .jobs-section{
+               background: #002766;
+              }
+              .vendevio-map {
+               max-width: 100%;
+               margin: 48px auto;
+               display: flex;
+               justify-content: center;
+              }  
+              @media only screen and (max-width: 600px) {
+              .map-desktop{
+               display: none;
+               }
+              } 
+              @media only screen and (min-width: 601px) {
+              .map-mobile{
+               display: none;
+               }
+              } 
             `}</style>
 
         </div>

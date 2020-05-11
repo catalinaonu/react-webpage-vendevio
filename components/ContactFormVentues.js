@@ -71,16 +71,13 @@ const ContactFormVentures = ({onSubmit}) => {
 
             </Form>
             <style jsx>{`
-            .contact-form-ventures {
-             margin: 24px auto;
-            }
-              
-            .button-contact-form-ventures{
+           .contact-form-ventures {
+            margin: 24px auto;
+           }
+           .button-contact-form-ventures{
             padding-top: 24px;
-            }
-          
-              
-            `}</style>
+           }
+        `}</style>
 
         </div>
 

@@ -12,7 +12,7 @@ const Footer = () => {
             <footer className="footer-container">
                 <div className="contact-section">
                     <Row justify="space-between">
-                        <Col xs={{span: 7, offset: 1}} lg={{span: 5, offset: 3}}>
+                        <Col xs={{span: 8, offset: 1}} lg={{span: 5, offset: 3}}>
                             <div id="contact" className="footer-subsection">
                                 <h3>Contact</h3>
                                 {/*phone icon*/}
@@ -45,7 +45,7 @@ const Footer = () => {
                         </Col>
 
                         {/*Important*/}
-                        <Col xs={{span: 5, offset: 3}} lg={{span: 5, offset: 3}}>
+                        <Col xs={{span: 4, offset: 3}} lg={{span: 5, offset: 3}}>
                             <div id="important" className="footer-subsection">
                                 <h3>Important</h3>
                                 <Col>

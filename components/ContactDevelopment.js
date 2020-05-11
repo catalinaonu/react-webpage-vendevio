@@ -16,7 +16,7 @@ const ContactDevelopment = () => (
         </div>
         <style jsx>{`
          .contact-form-development{
-          max-width: 100%;  
+          max-width: 80%;  
           margin: 48px auto;
           display: flex;
          } 
@@ -34,7 +34,7 @@ const ContactDevelopment = () => (
            justify-content: center;
            align-items: center;
            align-content: center;
-           margin: 24px auto;
+           margin: 48px auto;
           }
          }
          @media only screen and (min-width: 601px) { 
