@@ -1,16 +1,27 @@
 import React, {useState} from 'react'
 
-//antd
-import {Upload, message, Button} from 'antd';
+import {Upload, message, Button, Form, Input} from 'antd';
 import {UploadOutlined} from '@ant-design/icons';
 
-//components
-import Form from "./Form";
-import InputField from "./InputField";
-import ButtonForm from "./ButtonForm";
+const layout = {
+    labelCol: {
+        span: 8,
+    },
+    wrapperCol: {
+        span: 16,
+    },
+};
+const tailLayout = {
+    wrapperCol: {
+        offset: 8,
+        span: 16,
+    },
+};
+
+const {TextArea} = Input;
 
 //for upload button
-const props = {
+const upload = {
     name: 'file',
     action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     headers: {
@@ -28,56 +39,83 @@ const props = {
     },
 };
 
-const ContactFormVentures = ({onSubmit}) => {
+const ContactFormVentures = () => {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [text, setText] = useState('')
 
+    const onFinish = values => {
+        console.log('Success:', values);
+    };
+
+    const onFinishFailed = errorInfo => {
+        console.log('Failed:', errorInfo);
+    };
+
+    const onChange = event => onChange(event.target.value)
+
     return (
-        <div className="contact-form-ventures">
+        <>
             <Form
-                onSubmit={event => {
-                    onSubmit(company, email, text);
-                    event.preventDefault();
+                {...layout}
+                name="contact-form-ventures"
+                initialValues={{
+                    remember: true,
                 }}
+                onFinish={onFinish}
+                onFinishFailed={onFinishFailed}
             >
-                    <InputField value={company} onChange={setCompany}>
-                        Venture/Startup:
-                    </InputField>
+                <Form.Item
+                    label="Company"
+                    name="company"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your username!',
+                        },
+                    ]}
+                >
+                    <Input value={company} onChange={setCompany}/>
+                </Form.Item>
+                <Form.Item
+                    label="Email"
+                    name="email"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your email!',
+                        },
+                    ]}
+                >
+                    <Input value={email} onChange={setEmail}/>
+                </Form.Item>
+                <Form.Item
+                    label="Idee in einem Satz"
+                    name="idee in einem Satz"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your email!',
+                        },
+                    ]}
+                >
+                    <TextArea row={4} value={text} onChange={setText}/>
+                </Form.Item>
 
-                    <InputField value={text} onChange={setText}>
-                        Idee in einem Satz:
-                    </InputField>
-                 <InputField value={email} onChange={setEmail}>
-                        Email:
-                    </InputField>
-
-                <div className="button-contact-form-ventures">
-                    <Upload {...props}>
-
+                <Form.Item {...tailLayout}>
+                    <Upload {...upload}>
                         <Button>
                             <UploadOutlined/> Click to Upload
                         </Button>
                     </Upload>
-                </div>
-
-                <div className="button-contact-form-ventures">
-                    <ButtonForm type="primary" htmlType="submit">
+                </Form.Item>
+                <Form.Item {...tailLayout}>
+                    <Button type="primary" htmlType="submit">
                         Jetzt kontaktieren
-                    </ButtonForm>
-                </div>
-
+                    </Button>
+                </Form.Item>
             </Form>
-            <style jsx>{`
-           .contact-form-ventures {
-            margin: 24px auto;
-           }
-           .button-contact-form-ventures{
-            padding-top: 24px;
-           }
-        `}</style>
-
-        </div>
+        </>
     )
 }
 

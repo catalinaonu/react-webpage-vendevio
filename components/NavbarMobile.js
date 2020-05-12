@@ -84,16 +84,15 @@ const NavbarMobile = () => {
                 </div>
             </Drawer>
             <style jsx>{`
-            .navbar-container-mobile{
-             display: flex;
-             justify-content: space-between;
-             padding-left: 20px;
+             .navbar-container-mobile{
+              display: flex;
+              justify-content: space-between;
+              padding-left: 20px;
              }
              h2 
              a {
                 color: #ffffff;
              }
-             //for mobile
              @media only screen and (min-width: 601px) {   
               .navbar-container-mobile {
                 display: none;

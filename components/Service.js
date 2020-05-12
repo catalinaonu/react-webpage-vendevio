@@ -1,14 +1,26 @@
 import React from "react";
-
-//antd
+import services from "./Data/infoServices";
 import {Card} from 'antd';
+
+const keys = Object.keys(services)
+
+const ServicesList = () => (
+    <>
+        {keys.map(key =>
+            <Service key={key} service={services[key]}/>
+        )}
+    </>
+)
 
 const {Meta} = Card;
 
 const Service = ({service}) => <div className="card-services">
     <Card
         hoverable
-        style={{width: 240, background: '#fafafa'}}
+        style={{
+            width: 240,
+            background: '#fafafa'
+        }}
         bordered={false}
         cover={service.img}
     >
@@ -17,4 +29,5 @@ const Service = ({service}) => <div className="card-services">
         />
     </Card>
 </div>
+
 export default Service

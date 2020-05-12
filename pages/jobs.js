@@ -4,17 +4,18 @@ import React from "react";
 import Head from "next/head";
 
 //antd
-import {Divider} from "antd";
+import {Divider, Row, Col} from "antd";
 
 // components
 import Footer from "../components/Footer";
 import Value from "../components/Value";
-import ServicesJob from "../components/ServicesJob";
 import ListOfJobs from "../components/ListOfJobs";
 import HeaderJobs from "../components/HeaderJobs";
+import Service from "../components/Service";
 
 // files with data
 import values from "../components/Data/values";
+import services from "../components/Data/infoServices";
 
 function Jobs() {
     return (
@@ -29,20 +30,33 @@ function Jobs() {
             </header>
 
             {/* values/divider*/}
-            <section className="values-section">
+            <section className="values-section-jobs">
                 <Value value={values["job"]["chance"]}/>
             </section>
 
             {/*services*/}
-            <section className="services-section">
-                <ServicesJob/>
+            <section className="services-section-jobs">
+                <Row gutter={[16, 32]} justify="center">
+                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                        <Service service={services["jobs"]["coding"]}/>
+                    </Col>
+                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                        <Service service={services["jobs"]["team-and-remote"]}/>
+                    </Col>
+                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                        <Service service={services["jobs"]["gründe-neue-ventures"]}/>
+                    </Col>
+                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                        <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
+                    </Col>
+
+                </Row>
             </section>
 
             {/* values/divider*/}
-            <section className="values-section">
+            <section className="values-section-jobs">
                 <Value value={values["job"]["join-vendevio"]}/>
             </section>
-
 
             {/*List of jobs*/}
             <section className="jobs-section" id="list-of-jobs">
@@ -60,19 +74,18 @@ function Jobs() {
 
             {/*map image*/}
             <section className="vendevio-map">
-                <div className="map-desktop">
-                    <img src="/map.jpg"/>
-                </div>
-                <div className="map-mobile">
-                    <img src="/map_mobile.jpg"/>
-                </div>
+                <img src="/map.jpg"/>
             </section>
 
             <Footer/>
             <style jsx>{`
             .jobs-section{
               background: #002766;
-              
+            }
+             //services-section
+            .services-section-jobs{
+              max-width: 80%;
+              margin: 48px auto; 
             }
             .vendevio-map {
              max-width: 100%;
@@ -81,16 +94,12 @@ function Jobs() {
              justify-content: center;
             }  
             @media only screen and (max-width: 600px) {
-             .map-desktop{
-              display: none;
+             img{
+              max-width: 80%;
+              height: auto;
              }
             } 
-            @media only screen and (min-width: 601px) {
-             .map-mobile{
-              display: none;
-             }
-            } 
-           `}</style>
+          `}</style>
         </div>
     )
 }

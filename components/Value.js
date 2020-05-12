@@ -1,7 +1,24 @@
+import React from 'react';
+import values from "./Data/values"
+
+const keys = Object.keys(values)
+
+const ValuesList = () => (
+    <>
+        {keys.map(key => (
+            <Value key={key} value={values[key]}/>
+        ))}
+    </>
+)
+
 const Value = ({value}) => (
     <div className="values">
-        <div className="title">{value.title}</div>
-        <div className="description">{value.description}</div>
+        <div className="title">
+            {value.title}
+        </div>
+        <div className="description">
+            {value.description}
+        </div>
         <style jsx>{`
         .values {
          text-align: center;
@@ -26,7 +43,7 @@ const Value = ({value}) => (
         color: #434343;
         font-weight: 300;
        }
-      `}</style>
+     `}</style>
     </div>
 )
 

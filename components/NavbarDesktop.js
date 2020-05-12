@@ -66,31 +66,25 @@ const NavbarDesktop = () => (
         </ul>
 
         <style jsx>{`
-        .navbar-container-desktop {
+         .navbar-container-desktop {
             padding-top: 25px;
-        }
-        
-        //remove the list bullets
-        ul li{
-            list-style-type: none;
-        }
-
-        //text color
+         }
+         ul li{
+          list-style-type: none;
+         }
+          //text color
         .navbar-container-desktop
             h2,
             a{
               color: #fafafa;
               font-weight: 400;
-             }
-        
-        //to appear only on mobile
-        @media only screen and (max-width: 600px){
-            .navbar-container-desktop{
-                display: none;
             }
+        @media only screen and (max-width: 600px){
+         .navbar-container-desktop{
+          display: none;
+         }
         }
-        
-        `}</style>
+      `}</style>
     </div>
 
 )

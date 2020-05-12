@@ -5,7 +5,7 @@ import NavbarMobile from "./NavbarMobile";
 import WelcomeMessage from "./WelcomeMessage";
 
 //files
-import welcomeMessage from "./Data/welcome_info";
+import welcomeMessage from "./Data/welcomeMessages";
 
 const HeaderTeam = () => (
     <div className="header-img">

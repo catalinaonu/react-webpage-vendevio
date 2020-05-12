@@ -1,8 +1,22 @@
 import React, {useState} from "react";
-import Form from "./Form";
-import InputField from "./InputField";
-import {Button,} from "antd";
+import {Form, Input, Button} from "antd";
 
+const layout = {
+    labelCol: {
+        span: 8,
+    },
+    wrapperCol: {
+        span: 16,
+    },
+};
+const tailLayout = {
+    wrapperCol: {
+        offset: 8,
+        span: 16,
+    },
+};
+
+const {TextArea} = Input;
 
 const ContactFormDevelopment = ({onSubmit}) => {
     const [company, setCompany] = useState('');
@@ -10,46 +24,85 @@ const ContactFormDevelopment = ({onSubmit}) => {
     const [phone, setPhone] = useState('')
     const [text, setText] = useState('')
 
+    const onFinish = values => {
+        console.log('Success:', values);
+    };
+
+    const onFinishFailed = errorInfo => {
+        console.log('Failed:', errorInfo);
+    };
+
+    const onChange = event => onChange(event.target.value)
+
     return (
-        <div className="contact-form-development">
+        <>
             <Form
-                onSubmit={event => {
-                    onSubmit(company, email, text, phone);
-                    event.preventDefault();
+                {...layout}
+                name="contact-form-ventures"
+                initialValues={{
+                    remember: true,
                 }}
+                onFinish={onFinish}
+                onFinishFailed={onFinishFailed}
             >
-                <InputField value={company} onChange={setCompany}>
-                    Company
-                </InputField>
+                <Form.Item
+                    label="Company"
+                    name="company"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your username!',
+                        },
+                    ]}
+                >
+                    <Input value={company} onChange={setCompany}/>
+                </Form.Item>
+                <Form.Item
+                    label="Email"
+                    name="email"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your email!',
+                        },
+                    ]}
+                >
+                    <Input value={email} onChange={setEmail}/>
+                </Form.Item>
+                <Form.Item
+                    label="Phone"
+                    name="phone"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your phone!',
+                        },
+                    ]}
+                >
+                    <Input value={phone} onChange={setPhone}/>
+                </Form.Item>
+                <Form.Item
+                    label="Kurzbeschreibung Anfrage"
+                    name="kurzbeschreibung anfrage"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your Kurzbeschreibung Anfrage !',
+                        },
+                    ]}
+                >
+                    <TextArea rows={4} value={text} onChange={setText}/>
+                </Form.Item>
 
-                <InputField value={email} onChange={setEmail}>
-                    Email:
-                </InputField>
-
-                <InputField value={phone} onChange={setPhone}>
-                    Phone:
-                </InputField>
-
-                <InputField value={text} onChange={setText}>
-                    Kurzbeschreibung Anfrage:
-                </InputField>
-                <div className="button-contact-form-development">
+                <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
-                        Jetzt kontaktieren
+                        Submit
                     </Button>
-                </div>
-
+                </Form.Item>
             </Form>
-            <style jsx>{`
-            .button-contact-form-development {
-             padding-top: 24px;
-            }
-            `}</style>
-        </div>
-
+        </>
     )
 }
-
 
 export default ContactFormDevelopment
 

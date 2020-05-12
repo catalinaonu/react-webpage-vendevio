@@ -5,7 +5,7 @@ import OpenPosition from "../../components/OpenPosition";
 import JobApplication from "../../components/JobApplyForm";
 
 //file date
-import openJobs from "../../components/Data/open_positions";
+import openJobs from "../../components/Data/openPositions";
 
 
 

@@ -1,17 +1,10 @@
 import React from "react";
-
-//next
 import Link from 'next/link';
-
-//files
-import openJobs from "./Data/open_positions";
-
-//antd
+import openJobs from "./Data/openPositions";
 import {Row, Col, Divider} from 'antd';
 
 const keys = Object.keys(openJobs)
 
-// list with all the jobs + link to a specific job
 const ListOfJobs = () => (
     <div className='list-of-jobs'>
         {keys.map(key => (
@@ -29,7 +22,6 @@ const ListOfJobs = () => (
                 <Col xs={{span: 10, offset: 1}} lg={{span: 4, offset: 1}}>
                     {openJobs[key].starting_time}
                 </Col>
-
 
                 <Col xs={{span: 8, offset: 3}} lg={{span: 4, offset: 1}}>
                     {openJobs[key].location}
