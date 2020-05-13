@@ -36,11 +36,11 @@ const Value = ({value}) => (
         }
        }
        .title{
-        color: #faad14;
+        color: var(--value-title-color);
         font-weight: 400;
        }
        .description {
-        color: #434343;
+        color: var(--value-description-color);
         font-weight: 300;
        }
      `}</style>

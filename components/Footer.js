@@ -106,11 +106,8 @@ const Footer = () => {
              .footer-container{
               font-size: 14px;
              }
-              
           `}</style>
-
         </>
-
     )
 }
 

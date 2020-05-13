@@ -2,20 +2,23 @@ import React from "react";
 
 //next
 import Head from "next/head";
+import Link from "next/link";
 
 //antd
-import {Divider, Row, Col} from "antd";
+import {Divider, Row, Col, Button} from "antd";
 
 // components
 import Footer from "../components/Footer";
 import Value from "../components/Value";
 import ListOfJobs from "../components/ListOfJobs";
-import HeaderJobs from "../components/HeaderJobs";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
 import Service from "../components/Service";
 
 // files with data
 import values from "../components/Data/values";
 import services from "../components/Data/infoServices";
+
 
 function Jobs() {
     return (
@@ -26,15 +29,19 @@ function Jobs() {
             </Head>
 
             <header id="jobs-header">
-                <HeaderJobs/>
+                <div className="header-img">
+                    <NavbarDesktop/>
+                    <NavbarMobile/>
+                    <Link href="#list-of-jobs">
+                        <div className="jobs-link">
+                            <a title="Jobs Page"> <Button ghost size="large">AKTUELLE STELLEN</Button></a>
+                        </div>
+                    </Link>
+                </div>
             </header>
-
-            {/* values/divider*/}
             <section className="values-section-jobs">
                 <Value value={values["job"]["chance"]}/>
             </section>
-
-            {/*services*/}
             <section className="services-section-jobs">
                 <Row gutter={[16, 32]} justify="center">
                     <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
@@ -49,38 +56,76 @@ function Jobs() {
                     <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
                         <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
                     </Col>
-
                 </Row>
             </section>
-
-            {/* values/divider*/}
             <section className="values-section-jobs">
                 <Value value={values["job"]["join-vendevio"]}/>
             </section>
-
-            {/*List of jobs*/}
             <section className="jobs-section" id="list-of-jobs">
-                <Divider plain style={{fontSize: 32, color: '#FFFFFF'}}>
+                <Divider plain style={{
+                    fontSize: 32,
+                    color: 'var(--light-color)'
+                }}>
                     AKTUELLE STELLEN
                 </Divider>
                 <ListOfJobs/>
                 <Divider/>
             </section>
-
-            {/*values/divider*/}
             <section className="values-section">
                 <Value value={values["job"]["meet-us"]}/>
             </section>
-
-            {/*map image*/}
             <section className="vendevio-map">
                 <img src="/map.jpg"/>
             </section>
-
             <Footer/>
             <style jsx>{`
+             .header-img {
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/jobs_large.jpg');
+             }
+             @media only screen and (max-width: 600px) {
+             .header-img{
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/jobs_small.jpg'); 
+              height: 30vh;
+                        }
+             }
+             //center the link button of the header
+            .jobs-link {
+             display: flex;
+             flex-direction: row;
+             justify-content: flex-end;
+             align-items: flex-end;
+             align-content: flex-end;
+             height: 100vh;
+            }
+            @media only screen and (max-width: 600px) {
+             .jobs-link {
+              padding-bottom: 24px;
+              padding-right: 24px;
+             }
+            }
+            @media only screen and (min-width: 601px) {
+             .jobs-link {
+              padding-bottom: 100px;
+              padding-right: 100px;
+               }
+             } 
+             //jobs section
             .jobs-section{
-              background: #002766;
+              background: var(--dark-blue-background);
             }
              //services-section
             .services-section-jobs{

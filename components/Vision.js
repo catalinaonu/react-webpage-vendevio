@@ -16,14 +16,14 @@ const VisionList = () => (
 const Vision = ({visionMessage}) => <>
     <Card size="small"
           headStyle={{
-              backgroundColor: '#364d79',
-              color: '#ffffff',
+              backgroundColor: 'var(--light-blue-background)',
+              color: 'var(--light-color)',
               textAlign: 'center',
               fontSize: 18
           }}
           bodyStyle={{
-              backgroundColor: '#364d79',
-              color: '#ffffff',
+              backgroundColor: 'var(--light-blue-background)',
+              color: 'var(--light-color)',
               fontSize: 18,
               fontWeight: 300
           }}

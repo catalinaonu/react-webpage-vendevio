@@ -7,7 +7,6 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Value from "../components/Value";
 import Company from "../components/Company";
-import HeaderVentures from "../components/HeaderVentures";
 import TeamMemberForm from "../components/TeamMemberForm";
 import ContactFormVentures from "../components/ContactFormVentues";
 import Vision from "../components/Vision";
@@ -21,7 +20,12 @@ import services from "../components/Data/infoServices";
 import companies from "../components/Data/infoCompanies";
 
 //antd
-import {Row, Col, Carousel} from 'antd';
+import {Row, Col, Carousel, Button} from 'antd';
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
+import WelcomeMessage from "../components/WelcomeMessage";
+import welcomeMessage from "../components/Data/welcomeMessages";
+import Link from "next/link";
 
 
 function Ventures() {
@@ -33,15 +37,25 @@ function Ventures() {
             </Head>
 
             <header id="ventures-header">
-                <HeaderVentures/>
+                <div className="header-img">
+                    <NavbarDesktop/>
+                    <NavbarMobile/>
+                    <section className="welcome-messages-ventures">
+                        <div className="welcome-message-ventures">
+                            <WelcomeMessage welcomeMessage={welcomeMessage["ventures_page"]}/>
+                        </div>
+                        {/*link to contact form*/}
+                        <div className="link-contact-form">
+                            <Link href="#contact-form-ventures">
+                                <a title="Ventures Page"><Button ghost size="large">JETZT BEWERBEN</Button></a>
+                            </Link>
+                        </div>
+                    </section>
+                </div>
             </header>
-
-            {/*values/divider */}
             <section className="values-section-ventures">
                 <Value value={values["ventures"]["leistungen_venture"]}/>
             </section>
-
-            {/*vision*/}
             <section className="vision-section-ventures">
                 <Row gutter={[16, 16]} justify="center">
                     <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
@@ -58,8 +72,6 @@ function Ventures() {
                     </Col>
                 </Row>
             </section>
-
-            {/*services*/}
             <section className="services-section-ventures">
                 <Row gutter={[16, 32]} justify="center">
                     <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
@@ -76,19 +88,15 @@ function Ventures() {
                     </Col>
                 </Row>
             </section>
-
-            {/*Customers*/}
             <section className="customers-section-ventures">
-                <div className="carousel-customers-ventures" style={{height: 300}}>
-                    <Carousel autoplay>
+                <div className="carousel-customers-ventures">
+                    <Carousel autoplay style={{height: 300}}>
                         <Company company={companies["Alveri"]}/>
                         <Company company={companies["QuickSpeech"]}/>
                         <Company company={companies["Vereinsplaner"]}/>
                     </Carousel>
-                    </div>
+                </div>
             </section>
-
-            {/*contact form*/}
             <section className="contact-ventures">
                 <div className="team-member-ventures">
                     <TeamMemberForm teamMember={team["Kambis"]}/>
@@ -97,13 +105,53 @@ function Ventures() {
                     <ContactFormVentures/>
                 </div>
             </section>
-
-
             <Footer/>
             <style jsx>{`
+             .header-img {
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                           ), url('/ventures_large.jpg'); 
+             }
+            
+             @media only screen and (max-width: 600px) {
+              .header-img{
+               background:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                           ), url('/ventures_small.jpg'); 
+               height: 30vh;
+               }
+             }
+               //center the messages on the background img
+             .welcome-messages-ventures{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+             }
+             @media only screen and (max-width: 600px) {
+              .welcome-messages-ventures{
+               height: 20vh;
+              }
+             }
+             @media only screen and (min-width: 601px) {
+              .welcome-messages-ventures{
+               height: 80vh;
+              }
+             }
              //vision section
             .vision-section-ventures{
-             background: #002766;
+             background: var(--dark-blue-background);
              max-width: 100%;
              margin: 0px auto;
              padding: 48px;
@@ -120,42 +168,41 @@ function Ventures() {
             }
              //customers section
             .customers-section-ventures {
-             background:  #364d79;
+             background:  var( --light-blue-background);
              margin: 48px auto;
             }  
             .carousel-customers-ventures {
              max-width: 60%;
              margin: 24px auto;
-             background: #364d79;
+             background: var( --light-blue-background);
             }
             @media only screen and (max-width: 600px) {
              .carousel-customers-ventures {
               display: none;
              }
             } 
-            
-            //contact section
-             .contact-ventures{
-              max-width: 100%;  
-              margin: 48px auto;
-              display: flex;
-             } 
+              //contact section
+            .contact-ventures{
+             max-width: 100%;  
+             margin: 48px auto;
+             display: flex;
+            } 
               //Prevent flexbox shrinking
-             .team-member-ventures {
+            .team-member-ventures {
               flex: 1;
-             }
-             .contact-form-ventures {
+            }
+            .contact-form-ventures {
               flex: 2;
-              margin-top: 48px;
-             }
-             @media only screen and (max-width: 600px) {
-              .contact-ventures {
-               flex-direction: column;
-               flex-flow: flex-direction; 
-               justify-content: center;
-               align-items: center;
-               align-content: center;
-               }
+             margin-top: 48px;
+            }
+            @media only screen and (max-width: 600px) {
+             .contact-ventures {
+              flex-direction: column;
+              flex-flow: flex-direction; 
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+              }
              }
              @media only screen and (min-width: 601px) { 
               .contact-ventures {
@@ -167,7 +214,6 @@ function Ventures() {
                align-content: center;
               }
              }  
-        
             `}</style>
         </div>
     );

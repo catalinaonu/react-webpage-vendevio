@@ -33,11 +33,11 @@ const ListOfJobs = () => (
         .list-of-jobs {
          max-width: 100%;
          margin: 48px auto;
-         color: #FFFFFF;
+         color: var(--light-color);
          font-size: 18px;
         }
         a {
-        color: #FFFFFF;
+        color: var(--light-color);
          font-size: 24px;
         }
         @media only screen and (min-width: 601px) {
@@ -49,7 +49,7 @@ const ListOfJobs = () => (
           font-size: 18px;
         }
        a:hover {
-         color: #e6f7ff;
+         color: var(--light-blue-hoover);
          opacity: 0.6;
         }
       `}</style>

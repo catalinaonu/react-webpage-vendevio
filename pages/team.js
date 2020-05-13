@@ -9,15 +9,20 @@ import Service from "../components/Service";
 import Value from "../components/Value";
 import PhotoGrid from "../components/PhotoGrid";
 import TeamMemberForm from "../components/TeamMemberForm";
-import HeaderTeam from "../components/HeaderTeam";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
+import WelcomeMessage from "../components/WelcomeMessage";
+
 
 //files with data
 import values from "../components/Data/values";
 import services from "../components/Data/infoServices";
 import team from "../components/Data/infoTeam";
+import welcomeMessage from "../components/Data/welcomeMessages";
 
 //antd
 import {Col, Row} from "antd";
+
 
 function Team() {
     return (
@@ -28,15 +33,17 @@ function Team() {
             </Head>
 
             <header id="team-header">
-                <HeaderTeam/>
+                <div className="header-img">
+                    <NavbarDesktop/>
+                    <NavbarMobile/>
+                    <section className="welcome-messages-team">
+                        <WelcomeMessage welcomeMessage={welcomeMessage["team_page"]}/>
+                    </section>
+                </div>
             </header>
-
-            {/*values/divider*/}
             <section className="values-section-team">
                 <Value value={values["team"]["unsere-werte"]}/>
             </section>
-
-            {/* services with photo and description*/}
             <section className="services-section-team">
                 <Row gutter={[16, 32]} justify="center">
                     <Col xs={{span: 18, offset: 6}} lg={{span: 6, offset: 2}}>
@@ -50,13 +57,9 @@ function Team() {
                     </Col>
                 </Row>
             </section>
-
-            {/*values/divider*/}
             <section className="values-section-team">
                 <Value value={values["team"]["unsere-helden"]}/>
             </section>
-
-            {/*Photos of the entire team*/}
             <section className="team-section">
                 <div className="card-wrapper-managers">
                     <Row gutter={[16, 32]} justify="center">
@@ -73,9 +76,31 @@ function Team() {
                 </div>
                 <PhotoGrid/>
             </section>
-
             <Footer/>
             <style jsx>{`
+             .header-img {
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/team_large.jpg'); 
+             }
+            @media only screen and (max-width: 600px) {
+            .header-img{
+             background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/team_small.jpg'); 
+             height: 30vh;
+                        }
+             }        
              //services-section
             .services-section-team{
              max-width: 80%;

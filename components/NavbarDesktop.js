@@ -76,7 +76,7 @@ const NavbarDesktop = () => (
         .navbar-container-desktop
             h2,
             a{
-              color: #fafafa;
+              color: var(--light-color);
               font-weight: 400;
             }
         @media only screen and (max-width: 600px){

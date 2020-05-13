@@ -5,7 +5,6 @@ import Head from "next/head";
 
 // components
 import Footer from "../components/Footer";
-import HeaderDevelopment from "../components/HeaderDevelopment";
 import Value from "../components/Value";
 import Company from "../components/Company";
 import TeamMemberForm from "../components/TeamMemberForm";
@@ -20,9 +19,14 @@ import vision from "../components/Data/vision";
 import services from "../components/Data/infoServices";
 
 //antd
-import {Carousel, Col, Row} from "antd";
+import {Button, Carousel, Col, Row} from "antd";
 
 import companies from "../components/Data/infoCompanies";
+import NavbarDesktop from "../components/NavbarDesktop";
+import NavbarMobile from "../components/NavbarMobile";
+import WelcomeMessage from "../components/WelcomeMessage";
+import welcomeMessage from "../components/Data/welcomeMessages";
+import Link from "next/link";
 
 const Development = () => {
     return (
@@ -31,17 +35,28 @@ const Development = () => {
                 <title> Development Page </title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
             </Head>
-
             <header id="development-header">
-                <HeaderDevelopment/>
+                <div className="header-img">
+                    <NavbarDesktop/>
+                    <NavbarMobile/>
+                    <section className="welcome-messages">
+                        <div className="welcome-messages-development">
+                            <div className="welcome-message-development">
+                                <WelcomeMessage welcomeMessage={welcomeMessage["development_page"]}/>
+                            </div>
+                            {/*link to contact form*/}
+                            <div className="link-contact-form-development">
+                                <Link href="#contact-form-development">
+                                    <a title="Development Page"><Button ghost size="large">jetzt bewerben</Button></a>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </header>
-
-            {/*values/divider*/}
             <section className="values-section-development">
                 <Value value={values["development"]["projectmanagement"]}/>
             </section>
-
-            {/*vision_list*/}
             <section className="vision-section-development">
                 <Row gutter={[16, 16]} justify="center">
                     <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
@@ -58,8 +73,6 @@ const Development = () => {
                     </Col>
                 </Row>
             </section>
-
-            {/*ServicesList with image and description*/}
             <section className="services-section-development">
                 <Row gutter={[16, 32]} justify="center">
                     <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
@@ -76,13 +89,9 @@ const Development = () => {
                     </Col>
                 </Row>
             </section>
-
-            {/*values/divider*/}
             <section className="values-section-development">
                 <Value value={values["development"]["leistungen_development"]}/>
             </section>
-
-            {/*customers*/}
             <section className="customers-section-development">
                 <div className="carousel-customers-development">
                     <Carousel autoplay>
@@ -95,8 +104,6 @@ const Development = () => {
                     </Carousel>
                 </div>
             </section>
-
-            {/*form contact*/}
             <section className="contact-development">
                 <div className="team-member-development">
                     <TeamMemberForm teamMember={team["Stefan"]}/>
@@ -107,9 +114,49 @@ const Development = () => {
             </section>
             <Footer/>
             <style jsx>{`
+             .header-img {
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/development_large.jpg'); 
+             }
+             @media only screen and (max-width: 600px) {
+             .header-img{
+              background:  linear-gradient(
+                           rgba(0, 0, 0, 0.4),
+                           rgba(0, 0, 0, 0.4)
+                           ), url('/development_small.jpg'); 
+              height: 30vh;
+              }
+             }
+             .welcome-messages-development{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+             }
+             @media only screen and (max-width: 600px) {
+              .welcome-messages-development{
+               height: 20vh;
+              }
+             }
+             @media only screen and (min-width: 601px) {
+              .welcome-messages-development{
+               height: 80vh;
+              }
+             }
               //vision section
              .vision-section-development{
-              background: #002766;
+              background: var(--dark-blue-background);
               max-width: 100%;
               margin: 0px auto;
               padding: 48px;
@@ -126,21 +173,20 @@ const Development = () => {
              }
               //customers section        
              .customers-section-development {
-              background: #364d79;
+              background: var(--light-blue-background);
               margin: 48px auto;
              }  
              .carousel-customers-development {
               max-width: 60%;
               margin: 0px auto;
-              background: #364d79;
+              background: var(--carousel-background);
              }
              @media only screen and (max-width: 600px) {
               .carousel-customers-development {
                display: none;
               }
              }  
-             
-             //contact section
+               //contact section
              .contact-development{
               max-width: 100%;  
               margin: 48px auto;
@@ -161,7 +207,7 @@ const Development = () => {
                justify-content: center;
                align-items: center;
                align-content: center;
-               }
+              }
              }
              @media only screen and (min-width: 601px) { 
               .contact-development {
@@ -173,7 +219,6 @@ const Development = () => {
                align-content: center;
               }
              }                
-               
             `}</style>
         </div>
     )

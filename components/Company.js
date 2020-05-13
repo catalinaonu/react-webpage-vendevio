@@ -20,7 +20,7 @@ const Company = ({company}) => <>
             height: 300,
             textAlign: 'center',
             background: '#364d79',
-            color: '#FFFFFF',
+            color: 'var(--light-color)',
             fontSize: 24,
             fontWeight: 300,
         }}

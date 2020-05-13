@@ -1,7 +1,7 @@
 import React from "react";
-import openJobs from "./Data/openPositions";
-import JobApplication from "./JobApplyForm";
 import Link from 'next/link';
+import JobApplication from "./JobApplyForm";
+import openJobs from "./Data/openPositions";
 import {Card, Button, Divider, Alert} from 'antd';
 
 const keys = Object.keys(openJobs);
@@ -20,7 +20,7 @@ const OpenPosition = ({job}) => {
                 style={{
                     width: 300,
                     fontSize: 18,
-                    background: '#fafafa'
+                    background: 'var(--default-background)'
                 }}>
                 <p>
                     <Button type="link" size="large">
@@ -49,7 +49,7 @@ const OpenPosition = ({job}) => {
             <Card
                 bordered={false}
                 style={{
-                    background: '#fafafa',
+                    background: 'var( --default-background)',
                     fontSize: 18
                 }}
             >

@@ -19,7 +19,7 @@ const Service = ({service}) => <div className="card-services">
         hoverable
         style={{
             width: 240,
-            background: '#fafafa'
+            background: 'var(--default-background)'
         }}
         bordered={false}
         cover={service.img}

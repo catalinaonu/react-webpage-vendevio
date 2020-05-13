@@ -91,7 +91,7 @@ const NavbarMobile = () => {
              }
              h2 
              a {
-                color: #ffffff;
+                color: var(--light-color);
              }
              @media only screen and (min-width: 601px) {   
               .navbar-container-mobile {

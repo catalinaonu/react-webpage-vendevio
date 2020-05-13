@@ -19,7 +19,7 @@ import {Col, Divider, Row} from "antd";
 
 const keys = Object.keys(companies)
 
-function Home() {
+function HomePage() {
     return (
         <div>
             <Head>
@@ -30,7 +30,7 @@ function Home() {
                 <div className="header-img">
                     <NavbarDesktop/>
                     <NavbarMobile/>
-                    <section className="welcome-messages">
+                    <section className="welcome-messages-homepage">
                         {/*Link to Venture Page*/}
                         <section className="welcome-message-ventures">
                             <Link href="/ventures">
@@ -38,7 +38,7 @@ function Home() {
                                     welcomeMessage={welcomeMessage["ventures_homepage"]}/></a>
                             </Link>
                         </section>
-                        {/*/!*Link to Development Page*!/*/}
+                        {/*Link to Development Page*/}
                         <section className="welcome-message-development">
                             <Link href="/development">
                                 <a title="Development Page"><WelcomeMessage
@@ -49,14 +49,14 @@ function Home() {
                 </div>
             </header>
             <Divider style={{
-                width: 100,
                 fontSize: 24,
-                color: '#8c8c8c',
-                margin: 48
+                color: 'var(--default-color)',
+                marginTop: 48
             }}
             >
                 Our Customers
             </Divider>
+            {/*Logo of the companies*/}
             <section className="customers-homepage">
                 <Row justify="center" align="middle" gutter={[32, 32]}>
                     {keys.map(key => (
@@ -72,58 +72,48 @@ function Home() {
             </footer>
             <style jsx>{`
              .header-img {
-             display: flex;
-             flex-direction: column;
-             flex-flow: flex-direction;
-             max-width: 100%;
-             height: 100vh;
-             //center the background img
-             background-position: center center;
-             background-repeat: no-repeat;
-             background-size: cover;
-            }
-            .welcome-message-ventures {
-             flex: 1;
-            }
-            .welcome-message-development{
-             flex: 1;
-            }
-            @media only screen and (max-width: 600px) {
-            .header-img{
-             background:  linear-gradient(
-                           rgba(0, 0, 0, 0.6),
-                           rgba(0, 0, 0, 0.6)
-                          ), url('/homepage_small.jpg'); 
-             height: 30vh;
-                        }
-            }
-             @media only screen and (min-width: 601px) {
-             .header-img{
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: cover;
               background:  linear-gradient(
                            rgba(0, 0, 0, 0.6),
                            rgba(0, 0, 0, 0.6)
                            ), url('/homepage_large.jpg'); 
-                         }
              }
-              //center the messages on the background img
-             .welcome-messages{  
+             .welcome-message-ventures {
+              flex: 1;
+             }
+             .welcome-message-development{
+              flex: 1;
+             }
+             @media only screen and (max-width: 600px) {
+              .header-img{
+               background:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                          ), url('/homepage_small.jpg'); 
+               height: 30vh;
+              }
+              .welcome-message-ventures :global(.description-welcome-message) {
+               display: none;
+             }
+              .welcome-message-development :global(.description-welcome-message) {
+                display: none;
+               }    
+             }
+               //center the messages on the background img
+             .welcome-messages-homepage{  
               display: flex;
               flex-direction: row;
               align-items: center;
               align-content: center;
               justify-content: space-around;
              }
-             //to hide the description on mobile
-             @media only screen and (max-width: 600px) {
-              .welcome-message-ventures :global(.description) {
-               display: none;
-              }
-              .welcome-message-development :global(.description) {
-                display: none;
-               }    
-              }     
-              
-                             
               // customers section
              .customers-homepage{
               margin: 48px auto;
@@ -138,4 +128,4 @@ function Home() {
     )
 }
 
-export default Home
+export default HomePage
