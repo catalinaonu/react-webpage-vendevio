@@ -47,7 +47,9 @@ const Development = () => {
                             {/*link to contact form*/}
                             <div className="link-contact-form-development">
                                 <Link href="#contact-form-development">
-                                    <a title="Development Page"><Button ghost size="large">jetzt bewerben</Button></a>
+                                    <a title="Development Page">
+                                        <Button ghost size="large">jetzt bewerben</Button>
+                                    </a>
                                 </Link>
                             </div>
                         </div>
@@ -104,11 +106,11 @@ const Development = () => {
                     </Carousel>
                 </div>
             </section>
-            <section className="contact-development">
+            <section className="contact-development" id="contact-form-development">
                 <div className="team-member-development">
                     <TeamMemberForm teamMember={team["Stefan"]}/>
                 </div>
-                <div className="contact-form-development">
+                <div className="contact-form-development" >
                     <ContactFormDevelopment/>
                 </div>
             </section>
@@ -123,7 +125,7 @@ const Development = () => {
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
-              background:  linear-gradient(
+              background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)
                            ), url('/development_large.jpg'); 

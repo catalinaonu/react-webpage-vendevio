@@ -17,7 +17,8 @@ const NavbarDesktop = () => (
                         <Link
                             href="/index">
                             <h2><a title="Home Page">
-                                <img src="/vendevio-header-logo.png" width="50"  height="50"/>Vendevio
+                                <img src="/vendevio-header-logo.png" width="50"  height="50"/>
+                                Vendevio
                             </a></h2>
                         </Link>
                     </li>
@@ -68,7 +69,7 @@ const NavbarDesktop = () => (
         <style jsx>{`
          .navbar-container-desktop {
             padding-top: 25px;
-         }
+                     }
          ul li{
           list-style-type: none;
          }

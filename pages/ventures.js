@@ -57,7 +57,7 @@ function Ventures() {
                 <Value value={values["ventures"]["leistungen_venture"]}/>
             </section>
             <section className="vision-section-ventures">
-                <Row gutter={[16, 16]} justify="center">
+                <Row gutter={[16, 16]} justify="center" >
                     <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
                     </Col>
@@ -73,6 +73,7 @@ function Ventures() {
                 </Row>
             </section>
             <section className="services-section-ventures">
+                <div className="cards wrapper">
                 <Row gutter={[16, 32]} justify="center">
                     <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
                         <Service service={services["ventures"]["code-exzellenz"]}/>
@@ -87,6 +88,7 @@ function Ventures() {
                         <Service service={services["ventures"]["startup-konditionen"]}/>
                     </Col>
                 </Row>
+                </div>
             </section>
             <section className="customers-section-ventures">
                 <div className="carousel-customers-ventures">
@@ -116,7 +118,7 @@ function Ventures() {
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
-              background:  linear-gradient(
+              background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.6),
                            rgba(0, 0, 0, 0.6)
                            ), url('/ventures_large.jpg'); 
@@ -213,7 +215,9 @@ function Ventures() {
                align-items: center;
                align-content: center;
               }
-             }  
+             } 
+             .cards-wrapper {
+             height: 300px;} 
             `}</style>
         </div>
     );

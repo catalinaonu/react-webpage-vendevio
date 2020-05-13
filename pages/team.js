@@ -84,17 +84,17 @@ function Team() {
               flex-flow: flex-direction;
               max-width: 100%;
               height: 100vh;
-              background-position: center center;
+              background-position: center;
               background-repeat: no-repeat;
-              background-size: cover;
-              background:  linear-gradient(
+              background-size: 100%;
+              background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)
                            ), url('/team_large.jpg'); 
              }
             @media only screen and (max-width: 600px) {
             .header-img{
-             background:  linear-gradient(
+             background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)
                            ), url('/team_small.jpg'); 

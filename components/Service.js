@@ -16,12 +16,14 @@ const {Meta} = Card;
 
 const Service = ({service}) => <div className="card-services">
     <Card
-        hoverable
         style={{
-            width: 240,
-            background: 'var(--default-background)'
+            width: 320,
+            height: 420,
+            background: 'var(--default-background)',
+            boxShadow: '0 0 30px 10px #d9d9d9',
+            padding: 20
         }}
-        bordered={false}
+        bordered={true}
         cover={service.img}
     >
         <Meta title={service.title}

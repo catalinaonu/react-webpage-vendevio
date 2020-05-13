@@ -77,10 +77,10 @@ function HomePage() {
               flex-flow: flex-direction;
               max-width: 100%;
               height: 100vh;
-              background-position: center center;
+              background-position: center center ;
               background-repeat: no-repeat;
               background-size: cover;
-              background:  linear-gradient(
+              background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.6),
                            rgba(0, 0, 0, 0.6)
                            ), url('/homepage_large.jpg'); 

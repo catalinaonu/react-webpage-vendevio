@@ -26,7 +26,7 @@ const services = {
         "technische-konzeption": {
             "img": <img src='/technsiche_konzeption.svg'/>,
             "title": "Technische Konzeption",
-            "description": "Ausarbeitung der Projektanforderungen, Festlegung von Milestones und die Entwicklung eines übergreifenden technischen Konzepts"
+            "description": "Ausarbeitung der Projektanforderungen, Festlegung von Milestones und die Entwicklung eines übergreifenden technischen Konzepts."
         },
         "technische_implementierung": {
             "img": <img src='/technische_implementierung.svg'/>,

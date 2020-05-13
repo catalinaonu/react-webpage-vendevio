@@ -16,16 +16,16 @@ const VisionList = () => (
 const Vision = ({visionMessage}) => <>
     <Card size="small"
           headStyle={{
-              backgroundColor: 'var(--light-blue-background)',
+              backgroundColor: 'var(--dark-blue-background)',
               color: 'var(--light-color)',
               textAlign: 'center',
               fontSize: 18
           }}
           bodyStyle={{
-              backgroundColor: 'var(--light-blue-background)',
+              backgroundColor: 'var(--dark-blue-background)',
               color: 'var(--light-color)',
               fontSize: 18,
-              fontWeight: 300
+              fontWeight: 300,
           }}
           title={visionMessage.title}
     >

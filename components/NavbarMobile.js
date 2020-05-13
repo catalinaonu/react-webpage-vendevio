@@ -38,7 +38,7 @@ const NavbarMobile = () => {
                 closable={true}
                 onClose={onClose}
                 visible={visible}
-                style={{height: 480, weight: 240}}
+                style={{ weight: 240}}
                 headerStyle={{background: '#fafafa'}}
                 bodyStyle={{fontSize: '18px', background: '#fafafa'}}
             >

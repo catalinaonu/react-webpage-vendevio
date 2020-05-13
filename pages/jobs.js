@@ -88,7 +88,7 @@ function Jobs() {
               background-position: center center;
               background-repeat: no-repeat;
               background-size: cover;
-              background:  linear-gradient(
+              background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)
                            ), url('/jobs_large.jpg');
