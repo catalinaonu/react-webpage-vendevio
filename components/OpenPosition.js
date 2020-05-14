@@ -2,12 +2,12 @@ import React from "react";
 import Link from 'next/link';
 import JobApplication from "./JobApplyForm";
 import openJobs from "./Data/openPositions";
-import {Card, Button, Divider, Alert} from 'antd';
+import {Card, List, Button, Divider} from 'antd';
 
-const keys = Object.keys(openJobs);
+const jobTitle = Object.keys(openJobs);
 
 const OpenPositionsList = () => <>
-    {keys.map(key =>
+    {jobTitle.map(key =>
         <OpenPosition key={key} job={openJobs[key]}/>
     )}
 </>
@@ -15,35 +15,26 @@ const OpenPositionsList = () => <>
 const OpenPosition = ({job}) => {
     return <div className="open-position">
         <div className="job-description">
+            <Divider orientation="left"> <Button type="link" size="large">
+                <Link href="/jobs">
+                    <a>AKTUELLE STELLEN</a>
+                </Link>
+            </Button></Divider>
             <Card
                 bordered={false}
-                style={{
-                    width: 300,
-                    fontSize: 18,
-                    background: 'var(--default-background)'
+                style={{background: 'var(--default-background)',
+                fontSize: 18,
+                lineHeight: 2.0
                 }}>
-                <p>
-                    <Button type="link" size="large">
-                        <Link href="/jobs">
-                            <a>AKTUELLE STELLEN</a>
-                        </Link>
-                    </Button>
-                </p>
-                <Divider/>
-                <p>{job.type_of_employment}</p>
-                <Divider/>
-                <p>{job.department}</p>
-                <Divider/>
-                <p>{job.starting_time}</p>
-                <Divider/>
-                <p>{job.location}</p>
-                <Divider/>
-                <p>{job.salary}</p>
-                <Divider/>
-                <p>{job.benefits}</p>
-                <Divider/>
-                <JobApplication/>
+                <div>{job.type_of_employment}</div>
+                <div>{job.location}</div>
+                <div>{job.salary}</div>
+                <div>{job.starting_time}</div>
+                <div>{job.benefits}</div>
             </Card>
+            <Divider orientation="left"> <JobApplication/></Divider>
+
+
         </div>
         <div className="job-responsibility">
             <Card
@@ -56,10 +47,11 @@ const OpenPosition = ({job}) => {
                 <h1>{job.position}</h1>
                 <p>{job.profile}</p>
                 <p>{job.responsibility}</p>
-                <Divider/>
-                <p>We look forward to hearing from you </p>
-                <JobApplication/>
+
             </Card>
+            <Divider/>
+            <p>We look forward to hearing from you </p>
+            <JobApplication/>
 
         </div>
         <style jsx>{`

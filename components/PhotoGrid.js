@@ -11,7 +11,8 @@ const style = {
     height: 300,
     width: 200,
     textAlign: 'left',
-    borderRadius: '3%'
+    borderRadius: '3%',
+    boxShadow:'0 0 5px 2px var(--shadow-color)'
 }
 
 const PhotoGrid = ({teamMember}) => {

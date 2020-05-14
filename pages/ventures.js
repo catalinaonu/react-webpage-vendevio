@@ -57,7 +57,7 @@ function Ventures() {
                 <Value value={values["ventures"]["leistungen_venture"]}/>
             </section>
             <section className="vision-section-ventures">
-                <Row gutter={[16, 16]} justify="center" >
+                <Row gutter={[16, 32]} justify="center" >
                     <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 1}}>
                         <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
                     </Col>
@@ -169,13 +169,14 @@ function Ventures() {
             }
              //customers section
             .customers-section-ventures {
-             background:  var( --light-blue-background);
-             margin: 48px auto;
+             background: var(--light-grey-background);
+             margin: 24px auto;
+             box-shadow:0 0 6px 3px var(--shadow-color);
             }  
             .carousel-customers-ventures {
              max-width: 60%;
-             margin: 24px auto;
-             background: var( --light-blue-background);
+             margin: 48px auto;
+             background: var(--light-grey-background);
             }
             @media only screen and (max-width: 600px) {
              .carousel-customers-ventures {

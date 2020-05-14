@@ -19,8 +19,8 @@ const Company = ({company}) => <>
             width: 960,
             height: 300,
             textAlign: 'center',
-            background: '#364d79',
-            color: 'var(--light-color)',
+            background: '#f0f0f0',
+            color: 'var(--dark-blue-background)',
             fontSize: 24,
             fontWeight: 300,
         }}

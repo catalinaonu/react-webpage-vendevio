@@ -9,6 +9,7 @@ function Layout(props) {
              --default-background: #fafafa;
              --default-color: #8c8c8c;
              --light-color: #ffffff;
+             --shadow-color: #d9d9d9;
              
              --value-title-color: #faad14;
              --value-description-color: #434343;
@@ -16,6 +17,7 @@ function Layout(props) {
              --dark-blue-background: #002766;
              --light-blue-background: #364d79;
              --light-blue-hoover: #e6f7ff;
+             --light-grey-background: #f0f0f0;
              
              }
              body {

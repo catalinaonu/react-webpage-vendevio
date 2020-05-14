@@ -21,7 +21,7 @@ const Service = ({service}) => <div className="card-services">
             height: 420,
             textAlign: 'center',
             background: 'var(--default-background)',
-            boxShadow: '0 0 30px 10px #d9d9d9',
+            boxShadow: '0 0 30px 10px var(--shadow-color)',
             padding: 20
         }}
         bordered={true}

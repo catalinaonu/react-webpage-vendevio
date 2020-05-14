@@ -5,8 +5,11 @@ const {Meta} = Card;
 
 const TeamMemberForm = ({teamMember}) => <>
     <Card
-        hoverable
-        style={{width: 240}}
+        style={{
+            width: 260,
+            padding: 10,
+            boxShadow: '0 0 5px 2px var(--shadow-color)'
+        }}
         cover={teamMember.photo_business}
     >
         <Meta title={teamMember.name}
