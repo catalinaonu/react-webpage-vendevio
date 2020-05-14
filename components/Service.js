@@ -19,6 +19,7 @@ const Service = ({service}) => <div className="card-services">
         style={{
             width: 320,
             height: 420,
+            textAlign: 'center',
             background: 'var(--default-background)',
             boxShadow: '0 0 30px 10px #d9d9d9',
             padding: 20

@@ -44,32 +44,25 @@ function Jobs() {
             </section>
             <section className="services-section-jobs">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["jobs"]["coding"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["jobs"]["team-and-remote"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["jobs"]["gründe-neue-ventures"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
                     </Col>
                 </Row>
             </section>
-            <section className="values-section-jobs">
+            <section className="values-section-jobs" id="list-of-jobs">
                 <Value value={values["job"]["join-vendevio"]}/>
             </section>
-            <section className="jobs-section" id="list-of-jobs">
-                <Divider plain style={{
-                    fontSize: 32,
-                    color: 'var(--light-color)'
-                }}>
-                    AKTUELLE STELLEN
-                </Divider>
+            <section className="jobs-section" >
                 <ListOfJobs/>
-                <Divider/>
             </section>
             <section className="values-section">
                 <Value value={values["job"]["meet-us"]}/>
@@ -123,11 +116,7 @@ function Jobs() {
               padding-right: 100px;
                }
              } 
-             //jobs section
-            .jobs-section{
-              background: var(--dark-blue-background);
-            }
-             //services-section
+              //services-section
             .services-section-jobs{
               max-width: 80%;
               margin: 48px auto; 

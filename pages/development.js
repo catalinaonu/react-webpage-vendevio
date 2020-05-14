@@ -61,32 +61,32 @@ const Development = () => {
             </section>
             <section className="vision-section-development">
                 <Row gutter={[16, 16]} justify="center">
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
+                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 1}}>
                         <Vision visionMessage={vision["development"]["projektmanagement"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
+                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
                         <Vision visionMessage={vision["development"]["innovative_denkansätze"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
+                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
                         <Vision visionMessage={vision["development"]["software_entwicklung"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
+                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
                         <Vision visionMessage={vision["development"]["zeitgemäße_technologien"]}/>
                     </Col>
                 </Row>
             </section>
             <section className="services-section-development">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["development"]["technische-konzeption"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["development"]["technische_implementierung"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["development"]["qualitätssicherung"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 5, offset: 1}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
                         <Service service={services["development"]["kundensupport"]}/>
                     </Col>
                 </Row>
@@ -158,7 +158,6 @@ const Development = () => {
              }
               //vision section
              .vision-section-development{
-              background: var(--dark-blue-background);
               max-width: 100%;
               margin: 0px auto;
               padding: 48px;

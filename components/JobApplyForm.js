@@ -82,7 +82,7 @@ const JobApplyForm = ({visible, onCreate, onCancel}) => {
                     <Button>
                         <UploadOutlined/> Upload your CV
                     </Button>
-                </Upload>,
+                </Upload>
             </Form>
         </Modal>
     )

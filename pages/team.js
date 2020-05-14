@@ -46,13 +46,13 @@ function Team() {
             </section>
             <section className="services-section-team">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 6, offset: 2}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
                         <Service service={services["team"]["coding_it_the_right_way"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 6, offset: 2}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
                         <Service service={services["team"]["love_what_you_do"]}/>
                     </Col>
-                    <Col xs={{span: 18, offset: 6}} lg={{span: 6, offset: 2}}>
+                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
                         <Service service={services["team"]["never_stop_innovating"]}/>
                     </Col>
                 </Row>
@@ -74,7 +74,9 @@ function Team() {
                         </Col>
                     </Row>
                 </div>
-                <PhotoGrid/>
+                <div className="card-wrapper-team">
+                    <PhotoGrid/>
+                </div>
             </section>
             <Footer/>
             <style jsx>{`
@@ -106,17 +108,18 @@ function Team() {
              max-width: 80%;
              margin: 48px auto; 
             }
-             //team section
-            .card-wrapper-managers{
-             width: 100%;
-             margin: 24px auto;
-            }
+            //  //team section
+            // .team-section{
+            //  width: 100%;
+            //  margin: 24px auto;
+            // }
             @media only screen and (min-width: 600px) {
              .card-wrapper-managers {
               max-width: 50%;  
+              margin: 48px auto;
              }
             }
-          `}</style>
+           `}</style>
         </div>
     )
 }
