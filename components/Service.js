@@ -17,9 +17,8 @@ const {Meta} = Card;
 const Service = ({service}) => <div className="card-services">
     <Card
         style={{
-            width: 320,
+            width: 300,
             height: 420,
-            textAlign: 'center',
             background: 'var(--default-background)',
             boxShadow: '0 0 30px 10px var(--shadow-color)',
             padding: 20

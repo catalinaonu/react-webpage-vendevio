@@ -7,8 +7,6 @@ const TeamMemberForm = ({teamMember}) => <>
     <Card
         style={{
             width: 260,
-            padding: 10,
-            boxShadow: '0 0 5px 2px var(--shadow-color)'
         }}
         cover={teamMember.photo_business}
     >

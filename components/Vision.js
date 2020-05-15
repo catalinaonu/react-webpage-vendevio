@@ -14,30 +14,17 @@ const VisionList = () => (
 )
 
 const Vision = ({visionMessage}) => <>
-    <Card size="small"
-          headStyle={{
-              backgroundColor: 'var(--dark-blue-background)',
-              color: 'var(--light-color)',
-              textAlign: 'center',
-              fontSize: 18,
-              padding: 24,
-              marginBottom: 5,
-              boxShadow: '0 0 15px 8px #486685'
-          }}
-          bodyStyle={{
-              height: 240,
-              backgroundColor: 'var(--dark-blue-background)',
-              color: 'var(--light-color)',
-              fontSize: 18,
-              fontWeight: 300,
-              padding: 24,
-              boxShadow: '0 0 15px 8px #486685'
-
-          }}
-          title={visionMessage.title}
-    >
+    <Card
+        title={visionMessage.title}
+        bordered={false}
+        style={{
+            width: 300,
+            background: 'var(--background-default)',
+            color: 'var(--color-default)',
+        }}>
         {visionMessage.description}
     </Card>
 </>
+
 
 export default Vision

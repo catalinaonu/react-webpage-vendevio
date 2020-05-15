@@ -57,37 +57,37 @@ function Ventures() {
                 <Value value={values["ventures"]["leistungen_venture"]}/>
             </section>
             <section className="vision-section-ventures">
-                <Row gutter={[16, 32]} justify="center" >
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 1}}>
+                <Row gutter={[16, 32]} justify="center">
+                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
+                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["startup-mindset"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
+                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["flexibles_beteiligungsmodell"]}/>
                     </Col>
-                    <Col xs={{span: 24, offset: 0}} lg={{span: 5, offset: 0}}>
+                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["gemeinsame_vision"]}/>
                     </Col>
                 </Row>
             </section>
             <section className="services-section-ventures">
                 <div className="cards wrapper">
-                <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
-                        <Service service={services["ventures"]["code-exzellenz"]}/>
-                    </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
-                        <Service service={services["ventures"]["netzwerk"]}/>
-                    </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
-                        <Service service={services["ventures"]["teile-des-teams"]}/>
-                    </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
-                        <Service service={services["ventures"]["startup-konditionen"]}/>
-                    </Col>
-                </Row>
+                    <Row gutter={[16, 32]} justify="center">
+                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                            <Service service={services["ventures"]["code-exzellenz"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                            <Service service={services["ventures"]["netzwerk"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                            <Service service={services["ventures"]["teile-des-teams"]}/>
+                        </Col>
+                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                            <Service service={services["ventures"]["startup-konditionen"]}/>
+                        </Col>
+                    </Row>
                 </div>
             </section>
             <section className="customers-section-ventures">
@@ -153,15 +153,9 @@ function Ventures() {
              }
              //vision section
             .vision-section-ventures{
-             max-width: 100%;
-             margin: 0px auto;
-             padding: 48px;
-            }
-            @media only screen and (min-width: 601px) {
-             .vision-section-ventures{
-              max-width: 80%;
-             }
-            }
+             max-width: 80%;
+             margin: 48px auto;                          }
+           
              //services section
             .services-section-ventures{
              max-width: 80%;

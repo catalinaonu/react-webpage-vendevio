@@ -121,6 +121,10 @@ function Jobs() {
               max-width: 80%;
               margin: 48px auto; 
             }
+            .jobs-section {
+             max-width: 80%;
+             margin: 0px auto;
+             }
             .vendevio-map {
              max-width: 100%;
              margin: 48px auto;

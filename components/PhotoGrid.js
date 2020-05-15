@@ -12,7 +12,6 @@ const style = {
     width: 200,
     textAlign: 'left',
     borderRadius: '3%',
-    boxShadow:'0 0 5px 2px var(--shadow-color)'
 }
 
 const PhotoGrid = ({teamMember}) => {
@@ -129,8 +128,10 @@ const PhotoGrid = ({teamMember}) => {
 
             </Row>
             <style jsx>{`
-            .{
-            
+             @media only screen and (max-width: 601px) {  
+              .card-grid-wrapper{
+               display: none;
+              }
              }
              @media only screen and (min-width: 600px) {  
               .card-grid-wrapper{

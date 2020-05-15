@@ -47,7 +47,7 @@ function Layout(props) {
              }
              
              a {
-                 color: var(--default-color);
+                 // color: var(--default-color);
                  text-decoration: none;
              }
              
