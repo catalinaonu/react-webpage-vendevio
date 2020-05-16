@@ -4,88 +4,70 @@ import JobApplication from "./JobApplyForm";
 import openJobs from "./Data/openPositions";
 import {Card, List, Button, Divider} from 'antd';
 
-const jobTitle = Object.keys(openJobs);
 
 const OpenPositionsList = () => <>
-    {jobTitle.map(key =>
+    {Object.keys(openJobs).map(key =>
         <OpenPosition key={key} job={openJobs[key]}/>
     )}
 </>
 
-const OpenPosition = ({job}) => {
-    return <div className="open-position">
-        <div className="job-description">
-            <Divider orientation="left"> <Button type="link" size="large">
+const OpenPosition = ({job}) => <div className="open-position">
+    <div className="job-description">
+        <List size="small">
+            <List.Item><Button type="link" size="large">
                 <Link href="/jobs">
                     <a>AKTUELLE STELLEN</a>
                 </Link>
-            </Button></Divider>
-            <Card
-                bordered={false}
-                style={{background: 'var(--default-background)',
-                fontSize: 18,
-                lineHeight: 2.0
-                }}>
-                <div>{job.type_of_employment}</div>
-                <div>{job.location}</div>
-                <div>{job.salary}</div>
-                <div>{job.starting_time}</div>
-                <div>{job.benefits}</div>
-            </Card>
-            <Divider orientation="left"> <JobApplication/></Divider>
-
-
-        </div>
-        <div className="job-responsibility">
-            <Card
-                bordered={false}
-                style={{
-                    background: 'var( --default-background)',
-                    fontSize: 18
-                }}
-            >
-                <h1>{job.position}</h1>
-                <p>{job.profile}</p>
-                <p>{job.responsibility}</p>
-
-            </Card>
-            <Divider/>
-            <p>We look forward to hearing from you </p>
-            <JobApplication/>
-
-        </div>
-        <style jsx>{`
+            </Button></List.Item>
+            <List.Item><p>Type of employment: {job.type_of_employment} </p></List.Item>
+            <List.Item><p>Location: {job.location}</p></List.Item>
+            <List.Item><p>Starting time: {job.starting_time}</p></List.Item>
+            <List.Item><p>Salary: {job.salary}</p></List.Item>
+            <List.Item><p>Benefits: {job.benefits}</p></List.Item>
+            <List.Item><JobApplication/></List.Item>
+        </List>
+    </div>
+    <div className="job-responsibility">
+        <List>
+            <List.Item><p className="title">{job.position}</p></List.Item>
+            <List.Item><p>{job.profile}</p></List.Item>
+            <List.Item><p>{job.responsibility}</p></List.Item>
+            <List.Item><p className="title">We look forward to hearing from you</p></List.Item>
+            <List.Item><JobApplication/></List.Item>
+        </List>
+    </div>
+    <style jsx>{`
         .open-position {
-         max-width: 60%;
-         margin: 0px auto;
+         max-width: 100%;
          display: flex;
          flex-direction: flex-row;
          justify-content: space-between;
         }
         .job-description {
          flex: 1;
-         margin-top: 200px;
+         margin: 48px 48px 0px 48px; 
         }
         .job-responsibility {
-         flex: 2;
-         margin-top: 100px;
-         margin-bottom: 200px;
+         flex: 3;
+         margin: 48px;
         }
         @media only screen and (max-width: 600px) {
          .open-position {
-          max-width: 100%;
           flex-direction: column;
-         }
-         .job-description {
-           margin: 0px 48px;
-         }
-         .job-responsibility {
-         margin: 24px;
+         } 
+        }
+        @media only screen and (min-width: 601px) {
+         .open-position {
+          max-width: 80%;
          }
         }
-      `}</style>
-    </div>
-}
+        .title {
+         font-size: 18px;
+        }
+        
+       `}</style>
+</div>
+
 
 export default OpenPosition
 

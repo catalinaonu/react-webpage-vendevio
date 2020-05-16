@@ -24,7 +24,6 @@ const columns = [
     },
 ];
 
-
 const ListOfJobs = () => <>
     <Table
         columns={columns}
@@ -32,6 +31,5 @@ const ListOfJobs = () => <>
     >
     </Table>
 </>
-
 
 export default ListOfJobs
