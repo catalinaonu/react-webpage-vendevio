@@ -92,7 +92,7 @@ function Ventures() {
                 </div>
             </section>
             <section className="customers-section-ventures">
-                <Carousel effect="fade">
+                <Carousel autoplay>
                     <div>
                             <Company company={companies["Alveri"]}/>
                     </div>

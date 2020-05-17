@@ -96,7 +96,7 @@ const Development = () => {
             </section>
             <section className="customers-section-development">
                 <div className="carousel-customers-development">
-                    <Carousel effect="fade">
+                    <Carousel autoplay>
                         <Company company={companies["Freebiebox"]}/>
                         <Company company={companies["Delta"]}/>
                         <Company company={companies["Seekyou"]}/>

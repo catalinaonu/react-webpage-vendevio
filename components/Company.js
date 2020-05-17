@@ -20,8 +20,8 @@ const Company = ({company}) => <>
     bordered={false}
 >
     <div className="card-content">
-    <p>{company.logo}</p>
-    <p>{company.description}</p>
+    <div className="logo-company">{company.logo}</div>
+    <div className="description-company">{company.description}</div>
     </div>
 </Card>
     <style jsx>{`
@@ -30,6 +30,9 @@ const Company = ({company}) => <>
      flex-direction: column;
      justify-content: center;
      align-items: center;
+    }
+    .logo-company {
+    padding-bottom: 24px;
     }
     
     `}</style>

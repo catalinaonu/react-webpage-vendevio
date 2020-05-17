@@ -58,7 +58,7 @@ function Layout(props) {
             }
             .ant-carousel .slick-slide {
              text-align: center;
-             height: 160px;
+             height: 200px;
              // line-height: 160px;
              background: var(--light-background);
              overflow: hidden;
