@@ -18,6 +18,7 @@ function Layout(props) {
              --light-blue-background: #364d79;
              --light-blue-hoover: #e6f7ff;
              --light-grey-background: #f0f0f0;
+             --light-background: #ffffff;
              
              }
              body {
@@ -47,13 +48,28 @@ function Layout(props) {
              }
              
              a {
-                 // color: var(--default-color);
+                 color: var(--default-color);
                  text-decoration: none;
              }
              
              a:hover {
                 opacity: 0.6;
                 var(--default-color);
+            }
+            .ant-carousel .slick-slide {
+             text-align: center;
+             height: 160px;
+             // line-height: 160px;
+             background: var(--light-background);
+             overflow: hidden;
+            }
+            .ant-carousel .slick-dots li button {
+             background: var(--value-description-color);
+             opacity: 0.4;
+            }
+            .ant-carousel .slick-dots li.slick-active button {
+             opacity: 1;
+             background:  var(--value-description-color);
             }
            `}</style>
         </div>

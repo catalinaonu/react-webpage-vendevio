@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // next
 import Head from "next/head";
 
@@ -91,13 +92,17 @@ function Ventures() {
                 </div>
             </section>
             <section className="customers-section-ventures">
-                <div className="carousel-customers-ventures">
-                    <Carousel autoplay style={{height: 300}}>
-                        <Company company={companies["Alveri"]}/>
+                <Carousel effect="fade">
+                    <div>
+                            <Company company={companies["Alveri"]}/>
+                    </div>
+                    <div>
                         <Company company={companies["QuickSpeech"]}/>
+                    </div>
+                    <div>
                         <Company company={companies["Vereinsplaner"]}/>
-                    </Carousel>
-                </div>
+                    </div>
+                </Carousel>
             </section>
             <section className="contact-ventures">
                 <div className="team-member-ventures">
@@ -161,18 +166,8 @@ function Ventures() {
              max-width: 80%;
              margin: 48px auto; 
             }
-             //customers section
-            .customers-section-ventures {
-             background: var(--light-grey-background);
-             margin: 24px auto;
-             box-shadow:0 0 6px 3px var(--shadow-color);
-            }  
-            .carousel-customers-ventures {
-             max-width: 60%;
-             margin: 48px auto;
-             background: var(--light-grey-background);
-            }
-            @media only screen and (max-width: 600px) {
+            
+             @media only screen and (max-width: 600px) {
              .carousel-customers-ventures {
               display: none;
              }
@@ -211,8 +206,11 @@ function Ventures() {
               }
              } 
              .cards-wrapper {
-             height: 300px;} 
-            `}</style>
+             height: 300px;
+             }
+ 
+             
+             `}</style>
         </div>
     );
 }

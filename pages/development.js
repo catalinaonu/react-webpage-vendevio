@@ -96,7 +96,7 @@ const Development = () => {
             </section>
             <section className="customers-section-development">
                 <div className="carousel-customers-development">
-                    <Carousel autoplay>
+                    <Carousel effect="fade">
                         <Company company={companies["Freebiebox"]}/>
                         <Company company={companies["Delta"]}/>
                         <Company company={companies["Seekyou"]}/>
@@ -168,15 +168,7 @@ const Development = () => {
               margin: 48px auto; 
              }
               //customers section        
-             .customers-section-development {
-              background: var(--light-grey-background);
-              margin: 48px auto;
-              box-shadow:0 0 6px 3px var(--shadow-color);gi
-             }  
-             .carousel-customers-development {
-              max-width: 60%;
-              margin: 0px auto;
-              background: var(--light-grey-background);
+           
              }
              @media only screen and (max-width: 600px) {
               .carousel-customers-development {

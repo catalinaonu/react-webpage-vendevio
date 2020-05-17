@@ -1,6 +1,7 @@
 import React from "react";
-import App, { Container } from 'next/app'
 import Layout from '../components/Layout'
+
+
 
 // ant.design
 import 'antd/dist/antd.css';
@@ -15,3 +16,5 @@ export default function MyApp({Component, pageProps}) {
         </div>
     )
 }
+
+

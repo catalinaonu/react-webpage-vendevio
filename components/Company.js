@@ -1,6 +1,8 @@
 import React from "react";
 import companies from "./Data/infoCompanies";
-import {Card} from 'antd';
+import {Card, Avatar} from 'antd';
+
+const {Meta} = Card;
 
 const keys = Object.keys(companies)
 
@@ -12,47 +14,26 @@ const CompaniesList = () => (
     </>
 )
 
+
 const Company = ({company}) => <>
-    <Card
-        bordered={false}
-        style={{
-            width: 960,
-            height: 300,
-            textAlign: 'center',
-            background: '#f0f0f0',
-            color: 'var(--dark-blue-background)',
-            fontSize: 24,
-            fontWeight: 300,
-        }}
-    >
-        <div className="card-content-customers">
-            <div className="logo-customers">
-                {company.img}
-            </div>
-            <div className="description-customers">
-                {company.description}
-            </div>
-        </div>
-    </Card>
+<Card
+    bordered={false}
+>
+    <div className="card-content">
+    <p>{company.logo}</p>
+    <p>{company.description}</p>
+    </div>
+</Card>
     <style jsx>{`
-     .card-content-customers{
-      margin: 0px auto;
-      display: flex;
-      height: 250px;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-     }
-     .logo-customers{
-      display: flex;
-      flex: 1;
-      justify-content: center;
-     }
-     .description-customers{
-      flex: 2;
-     }
-   `}</style>
+    .card-content{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+    
+    `}</style>
+
 </>
 
 export default Company
