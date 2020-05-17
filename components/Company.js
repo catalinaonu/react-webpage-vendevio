@@ -32,11 +32,9 @@ const Company = ({company}) => <>
      align-items: center;
     }
     .logo-company {
-    padding-bottom: 24px;
+     padding-bottom: 24px;
     }
-    
-    `}</style>
-
+   `}</style>
 </>
 
 export default Company
