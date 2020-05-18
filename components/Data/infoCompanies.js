@@ -25,6 +25,11 @@ const companies = {
         "logo": <img src='/primecrowd.png'/>,
         "description": "primeCROWD vernetzt wachstumsstarke Startups mit Investoren und ist eines der größten Startup-Investoren-Netzwerke Österreichs."
     },
+    "Delta": {
+        "id": "DELTA",
+        "logo": <img src='/delta.png'/>,
+        "description": "DELTA zählt zu den etabliertesten Gesamtdienstleistern für Immobilien, darunter die WU Wien, Tabakfabrik Linz und voestalpine."
+    },
     "Blockpit": {
         "id": "blockPit",
         "logo": <img src='/blockpit.svg'/>,
@@ -39,11 +44,6 @@ const companies = {
         "id": "LeadStudy",
         "logo": <img src='/lead_study.png'/>,
         "description": "LEAD steht für Lung, hEart, sociAl, boDy und ist die weltweit größte COPD Studie, initiiert durch die Ludwig Boltzmann Gesellschaft."
-    },
-    "Delta": {
-        "id": "DELTA",
-        "logo": <img src='/delta.png'/>,
-        "description": "DELTA zählt zu den etabliertesten Gesamtdienstleistern für Immobilien, darunter die WU Wien, Tabakfabrik Linz und voestalpine."
     },
     "QuickSpeech": {
         "id": "QueekSpeack",
