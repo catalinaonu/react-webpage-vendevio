@@ -117,14 +117,6 @@ const Development = () => {
             <Footer/>
             <style jsx>{`
              .header-img {
-              display: flex;
-              flex-direction: column;
-              flex-flow: flex-direction;
-              max-width: 100%;
-              height: 100vh;
-              background-position: center center;
-              background-repeat: no-repeat;
-              background-size: cover;
               background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)
@@ -168,13 +160,11 @@ const Development = () => {
               margin: 48px auto; 
              }
               //customers section        
-           
-             }
-             @media only screen and (max-width: 600px) {
-              .carousel-customers-development {
-               display: none;
-              }
-             }  
+             // @media only screen and (max-width: 600px) {
+             //  .carousel-customers-development {
+             //   display: none;
+             //  }
+             // }  
                //contact section
              .contact-development{
               max-width: 100%;  

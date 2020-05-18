@@ -81,14 +81,6 @@ function Team() {
             <Footer/>
             <style jsx>{`
              .header-img {
-              display: flex;
-              flex-direction: column;
-              flex-flow: flex-direction;
-              max-width: 100%;
-              height: 100vh;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: 100%;
               background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.4),
                            rgba(0, 0, 0, 0.4)

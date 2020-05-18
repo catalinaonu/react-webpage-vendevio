@@ -42,20 +42,29 @@ function Layout(props) {
              h1 {
                 color: var(--default-color);
              }
-                                             
              h3 {
                 color: var(--default-color);
              }
-             
-             a {
-                 color: var(--default-color);
-                 text-decoration: none;
+             a{
+               color: var(--default-color);
+               text-decoration: none;
              }
-             
              a:hover {
-                opacity: 0.6;
-                var(--default-color);
+               opacity: 0.6;
+               var(--default-color);
             }
+             //header image
+             .header-img {
+              display: flex;
+              flex-direction: column;
+              flex-flow: flex-direction;
+              max-width: 100%;
+              height: 100vh;
+              background-position: center center ;
+              background-repeat: no-repeat;
+              background-size: cover;
+             }
+             //carousel
             .ant-carousel .slick-slide {
              text-align: center;
              height: 200px;

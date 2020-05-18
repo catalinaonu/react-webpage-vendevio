@@ -72,14 +72,6 @@ function HomePage() {
             </footer>
             <style jsx>{`
              .header-img {
-              display: flex;
-              flex-direction: column;
-              flex-flow: flex-direction;
-              max-width: 100%;
-              height: 100vh;
-              background-position: center center ;
-              background-repeat: no-repeat;
-              background-size: cover;
               background-image:  linear-gradient(
                            rgba(0, 0, 0, 0.6),
                            rgba(0, 0, 0, 0.6)
@@ -92,14 +84,7 @@ function HomePage() {
               flex: 1;
              }
              @media only screen and (max-width: 600px) {
-              .header-img{
-               background:  linear-gradient(
-                           rgba(0, 0, 0, 0.6),
-                           rgba(0, 0, 0, 0.6)
-                          ), url('/homepage_small.jpg'); 
-               height: 30vh;
-              }
-              .welcome-message-ventures :global(.description-welcome-message) {
+             .welcome-message-ventures :global(.description-welcome-message) {
                display: none;
              }
               .welcome-message-development :global(.description-welcome-message) {
