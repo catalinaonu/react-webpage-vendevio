@@ -14,9 +14,9 @@ const CompaniesList = () => (
 const Company = ({company}) => <>
 <Card
     bordered={false}
->
+    >
     <div className="card-content">
-    <div className="logo-company">{company.logo}</div>
+        <div className="logo-company">{company.logo}</div>
     <div className="description-company">{company.description}</div>
     </div>
 </Card>
@@ -24,13 +24,13 @@ const Company = ({company}) => <>
     .card-content{
      display: flex;
      flex-direction: column;
-     justify-content: center;
      align-items: center;
+     justify-content: space-between;
     }
-    .logo-company {
-     padding-bottom: 24px;
-    }
-   `}</style>
+    .logo-company{
+     padding-bottom: 10px;
+     }
+  `}</style>
 </>
 
 export default Company

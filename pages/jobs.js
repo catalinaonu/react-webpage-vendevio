@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 //antd
-import {Divider, Row, Col, Button} from "antd";
+import {Row, Col, Button} from "antd";
 
 // components
 import Footer from "../components/Footer";
@@ -44,16 +44,16 @@ function Jobs() {
             </section>
             <section className="services-section-jobs">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["jobs"]["coding"]}/>
                     </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["jobs"]["team-and-remote"]}/>
                     </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["jobs"]["gründe-neue-ventures"]}/>
                     </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 5, offset: 1}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["jobs"]["offene-unternehmeskultur"]}/>
                     </Col>
                 </Row>

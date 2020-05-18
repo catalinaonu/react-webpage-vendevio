@@ -17,7 +17,7 @@ const style = {
 const PhotoGrid = ({teamMember}) => {
     return (
         <div className="card-grid-wrapper">
-            <Row gutter={[16, 16]}justify="center">
+            <Row gutter={[16, 16]} justify="center" align="middle">
 
                     <Col xs={{ span: 11, offset: 1 }} lg={{ span:4, offset: 1 }}>
                         <Card hoverable style={style}>

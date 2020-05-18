@@ -61,32 +61,32 @@ const Development = () => {
             </section>
             <section className="vision-section-development">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["development"]["projektmanagement"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["development"]["innovative_denkansätze"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["development"]["software_entwicklung"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["development"]["zeitgemäße_technologien"]}/>
                     </Col>
                 </Row>
             </section>
             <section className="services-section-development">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 20, offset :4 }} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset :0 }} lg={{span: 6, offset: 0}}>
                         <Service service={services["development"]["technische-konzeption"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["development"]["technische_implementierung"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["development"]["qualitätssicherung"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Service service={services["development"]["kundensupport"]}/>
                     </Col>
                 </Row>
@@ -97,12 +97,12 @@ const Development = () => {
             <section className="customers-section-development">
                 <div className="carousel-customers-development">
                     <Carousel autoplay>
-                        <Company company={companies["Freebiebox"]}/>
-                        <Company company={companies["Delta"]}/>
-                        <Company company={companies["Seekyou"]}/>
-                        <Company company={companies["LeadStudy"]}/>
-                        <Company company={companies["PrimeCrowd"]}/>
-                        <Company company={companies["Carployee"]}/>
+                        <div><Company company={companies["Freebiebox"]}/></div>
+                        <div><Company company={companies["Delta"]}/></div>
+                        <div><Company company={companies["Seekyou"]}/></div>
+                        <div><Company company={companies["LeadStudy"]}/></div>
+                        <div><Company company={companies["PrimeCrowd"]}/></div>
+                        <div><Company company={companies["Carployee"]}/></div>
                     </Carousel>
                 </div>
             </section>

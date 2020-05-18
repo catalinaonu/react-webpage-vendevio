@@ -46,13 +46,13 @@ function Team() {
             </section>
             <section className="services-section-team">
                 <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                         <Service service={services["team"]["coding_it_the_right_way"]}/>
                     </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                         <Service service={services["team"]["love_what_you_do"]}/>
                     </Col>
-                    <Col xs={{span: 22, offset: 2}} lg={{span: 6, offset: 2}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                         <Service service={services["team"]["never_stop_innovating"]}/>
                     </Col>
                 </Row>
@@ -63,13 +63,13 @@ function Team() {
             <section className="team-section">
                 <div className="card-wrapper-managers">
                     <Row gutter={[16, 32]} justify="center">
-                        <Col xs={{span: 18, offset: 6}} lg={{span: 7, offset: 1}}>
+                        <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                             <TeamMemberForm teamMember={team["Stefan"]}/>
                         </Col>
-                        <Col xs={{span: 18, offset: 6}} lg={{span: 7, offset: 1}}>
+                        <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                             <TeamMemberForm teamMember={team["Hannes"]}/>
                         </Col>
-                        <Col xs={{span: 18, offset: 6}} lg={{span: 7, offset: 1}}>
+                        <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 8, offset: 0}}>
                             <TeamMemberForm teamMember={team["Kambis"]}/>
                         </Col>
                     </Row>

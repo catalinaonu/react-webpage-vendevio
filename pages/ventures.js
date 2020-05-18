@@ -58,17 +58,17 @@ function Ventures() {
                 <Value value={values["ventures"]["leistungen_venture"]}/>
             </section>
             <section className="vision-section-ventures">
-                <Row gutter={[16, 32]} justify="center">
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                <Row gutter={[16, 32]} justify="center" >
+                    <Col justify="center" align="middle"  xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["technologiepartner"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["startup-mindset"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["flexibles_beteiligungsmodell"]}/>
                     </Col>
-                    <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                    <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                         <Vision visionMessage={vision["ventures"]["gemeinsame_vision"]}/>
                     </Col>
                 </Row>
@@ -76,16 +76,16 @@ function Ventures() {
             <section className="services-section-ventures">
                 <div className="cards wrapper">
                     <Row gutter={[16, 32]} justify="center">
-                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                        <Col justify="center" align="middle"  xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                             <Service service={services["ventures"]["code-exzellenz"]}/>
                         </Col>
-                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                        <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                             <Service service={services["ventures"]["netzwerk"]}/>
                         </Col>
-                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                        <Col justify="center" align="middle" xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                             <Service service={services["ventures"]["teile-des-teams"]}/>
                         </Col>
-                        <Col xs={{span: 20, offset: 4}} lg={{span: 6, offset: 0}}>
+                        <Col justify="center" align="middle"  xs={{span: 24, offset: 0}} lg={{span: 6, offset: 0}}>
                             <Service service={services["ventures"]["startup-konditionen"]}/>
                         </Col>
                     </Row>

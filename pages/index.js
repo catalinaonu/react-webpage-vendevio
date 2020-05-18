@@ -56,9 +56,9 @@ function HomePage() {
             </Divider>
             {/*Logo of the companies*/}
             <section className="customers-homepage">
-                <Row justify="center" align="middle" gutter={[32, 32]}>
+                <Row justify="center" align="middle" gutter={[16, 32]}>
                     {Object.keys(companies).map(key => (
-                        <Col key={key} xs={{span: 9, offset: 2}} lg={{span: 4, offset: 1}}>
+                        <Col justify="center" align="middle" key={key} xs={{span: 11, offset: 1}} lg={{span: 4, offset: 1}}>
                             {companies[key].logo}
                         </Col>
                     ))}
