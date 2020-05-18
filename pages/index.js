@@ -17,8 +17,6 @@ import welcomeMessage from "../components/Data/welcomeMessages";
 //antd
 import {Col, Divider, Row} from "antd";
 
-const keys = Object.keys(companies)
-
 function HomePage() {
     return (
         <div>
@@ -59,7 +57,7 @@ function HomePage() {
             {/*Logo of the companies*/}
             <section className="customers-homepage">
                 <Row justify="center" align="middle" gutter={[32, 32]}>
-                    {keys.map(key => (
+                    {Object.keys(companies).map(key => (
                         <Col key={key} xs={{span: 9, offset: 2}} lg={{span: 4, offset: 1}}>
                             {companies[key].logo}
                         </Col>
@@ -84,6 +82,14 @@ function HomePage() {
               flex: 1;
              }
              @media only screen and (max-width: 600px) {
+             
+             .header-img{
+              background-image:  linear-gradient(
+                           rgba(0, 0, 0, 0.6),
+                           rgba(0, 0, 0, 0.6)
+                           ), url('/homepage_small.jpg'); 
+               height: 30vh;             
+             }
              .welcome-message-ventures :global(.description-welcome-message) {
                display: none;
              }

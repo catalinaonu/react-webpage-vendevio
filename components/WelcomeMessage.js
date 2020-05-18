@@ -1,11 +1,10 @@
 import React from "react";
 import welcomeMessage from "./Data/welcomeMessages";
 
-const keys = Object.keys(welcomeMessage)
 
 const WelcomeMessagesList = () => (
     <>
-        {keys.map = (key => (
+        {Object.keys(welcomeMessage).map = (key => (
             <WelcomeMessage key={key} welcomeMessage={welcomeMessage[key]}/>
         ))}
     </>

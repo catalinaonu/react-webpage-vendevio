@@ -1,11 +1,9 @@
 import React from 'react';
 import values from "./Data/values"
 
-const keys = Object.keys(values)
-
 const ValuesList = () => (
     <>
-        {keys.map(key => (
+        {Object.keys(values).map(key => (
             <Value key={key} value={values[key]}/>
         ))}
     </>

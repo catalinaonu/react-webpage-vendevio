@@ -2,11 +2,10 @@ import React from "react";
 import vision from "./Data/vision"
 import {Card} from 'antd';
 
-const keys = Object.keys(vision)
 
 const VisionList = () => (
     <>
-        {keys.map(key => (
+        {Object.keys(vision).map(key => (
             <Vision key={key} visionMessage={vision[key]}/>
         ))}
         />

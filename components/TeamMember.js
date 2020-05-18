@@ -3,11 +3,10 @@ import React from "react";
 import TeamMember from "./TeamMember";
 import team from "./Data/infoTeam";
 
-const keys = Object.keys(team);
 
 const TeamList = () => (
     <>
-        {keys.map(key => (
+        {Object.keys(team).map(key => (
             <TeamMember key={key} teamMember={team[key]}/>
         ))}
     </>

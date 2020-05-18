@@ -2,11 +2,10 @@ import React from "react";
 import services from "./Data/infoServices";
 import {Card} from 'antd';
 
-const keys = Object.keys(services)
 
 const ServicesList = () => (
     <>
-        {keys.map(key =>
+        {Object.keys(services).map(key =>
             <Service key={key} service={services[key]}/>
         )}
     </>

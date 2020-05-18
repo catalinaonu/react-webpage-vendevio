@@ -2,13 +2,9 @@ import React from "react";
 import companies from "./Data/infoCompanies";
 import {Card, Avatar} from 'antd';
 
-const {Meta} = Card;
-
-const keys = Object.keys(companies)
-
 const CompaniesList = () => (
     <>
-        {keys.map(key =>
+        {Object.keys(companies).map(key =>
             <Company key={key} company={companies[key]}/>
         )}
     </>
