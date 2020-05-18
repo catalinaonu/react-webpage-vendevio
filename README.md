@@ -1,6 +1,4 @@
-This is a React/Next.js version for Vendevio ventures&development webpage. See it live [here](https://react-webpage-vendevio-hk1jxg9e2.now.sh/).
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+This is the [Next.js](https://nextjs.org/) webpage for Vendevio ventures&development bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app). See it live [here](https://react-webpage-vendevio-hk1jxg9e2.now.sh/).
 
 ## Getting Started
 
